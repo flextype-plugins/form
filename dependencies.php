@@ -28,4 +28,4 @@ $flextype['fieldsets'] = static function ($container) {
 /**
  * Add Form Twig extension
  */
-$flextype->view->addExtension(new FormTwigExtension($flextype));
+$flextype->twig->addExtension(new FormTwigExtension($flextype));
