@@ -1,5 +1,5 @@
 # enabled: true or false to disable the plugin
 enabled: true
 
-#Form plugin priority
-priority: 1
+# Form plugin priority
+priority: 2

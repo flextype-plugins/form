@@ -21,7 +21,7 @@ use function strpos;
 use function strtotime;
 use function substr_replace;
 
-class Form extends Model
+class Form extends Container
 {
     /**
      * Render form
