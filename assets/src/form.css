@@ -11,10 +11,10 @@
 @import 'base/icons';
 
 /* Vendor modules */
-@import 'modules/tabs';
-@import 'modules/select2';
-@import 'modules/trumbowyg';
-@import 'modules/flatpickr';
+@import 'tabs/tabs';
+@import 'select/select';
+@import 'trumbowyg/trumbowyg';
+@import 'flatpickr/flatpickr';
 
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
