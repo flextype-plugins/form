@@ -1,3 +1,12 @@
+{% set form_vendor_css = url() ~ '/site/plugins/form/assets/dist/css/vendor-build.min.css' %}
+{% set form_css = url() ~ '/site/plugins/form/assets/dist/css/form-build.min.css' %}
+
+{% do assets.add('css', form_vendor_css, 'admin', 3) %}
+{% do assets.add('css', form_css, 'admin', 4) %}
+
+{% set form_build_js = url() ~ '/site/plugins/form/assets/dist/js/form-build.min.js' %}
+{% do assets.add('js', form_build_js, 'admin', 2) %}
+
 <form action="" method="post" id="form">
     {{ csrf() }}
     <input type="hidden" id="action" name="action" value="save-form">
