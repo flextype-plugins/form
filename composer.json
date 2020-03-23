@@ -1,7 +1,7 @@
 {
     "name": "flextype-plugins/form",
     "type": "project",
-    "description": "Form Plugin to manage user forms for Flextype.",
+    "description": "Form Plugin to render user forms for Flextype.",
     "keywords": ["form", "plugin", "flextype", "php", "html"],
     "homepage": "https://github.com/flextype-plugins/form",
     "license": "MIT",

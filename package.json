@@ -1,7 +1,7 @@
 {
   "name": "Form",
   "version": "1.0.0",
-  "description": "Form Plugin to manage user forms for Flextype.",
+  "description": "Form Plugin to render user forms for Flextype.",
   "homepage": "http://flextype.org",
   "author": "Sergey Romanenko",
   "license": "MIT",

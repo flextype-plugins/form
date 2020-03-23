@@ -2,4 +2,4 @@
 enabled: true
 
 # Form plugin priority
-priority: 2
+priority: 70
