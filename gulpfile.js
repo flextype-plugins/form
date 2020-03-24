@@ -52,7 +52,7 @@ gulp.task('form-css', function() {
     .pipe(postcss([atimport(), tailwindcss(tailwindConfig)]))
     .pipe(
       purgecss({
-        content: ["templates/**/*.html"],
+        content: ["fieldsets/**/*.html"],
         extractors: [
           {
             extractor: TailwindExtractor = (content) => {
@@ -134,5 +134,5 @@ gulp.task('default', gulp.series(
  * Task: gulp watch
  */
 gulp.task('watch', function () {
-    gulp.watch(["templates/**/*.html", "assets/src/"], gulp.series('vendor-css', 'form-css'));
+    gulp.watch(["fieldsets/**/*.html", "assets/src/"], gulp.series('vendor-css', 'form-css'));
 });

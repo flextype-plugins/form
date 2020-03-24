@@ -35,7 +35,7 @@ class Form extends Container
      */
     public function render(array $fieldset, array $values = []) : string
     {
-        return $this->twig->fetch('plugins/form/templates/form.html',
+        return $this->twig->fetch('plugins/form/fieldsets/form.html',
                                             [
                                              'fieldset' => $fieldset,
                                              'values' => $values,

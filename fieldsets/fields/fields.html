@@ -1,4 +1,5 @@
 {% set fields = ['text', 'textarea', 'hidden', 'datetimepicker', 'heading', 'html', 'tags', 'select', 'select-routable', 'select-visibility', 'select-template', 'select-media'] %}
+
 {% set sizes =
     {
         '1/12': 'col w-1/12',
@@ -18,6 +19,6 @@
 
 {% for field in fields %}
     {% if properties.type == field %}
-        {% include "plugins/form/templates/fields/" ~ field ~ "/field.html" %}
+        {% include "plugins/form/fieldsets/fields/" ~ field ~ "/field.html" %}
     {% endif %}
 {% endfor %}

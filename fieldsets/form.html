@@ -14,7 +14,7 @@
     {% if fieldset.sections %}
 
         {% set tabs_js = url() ~ '/site/plugins/form/assets/src/tabs/tabs.js' %}
-        {% do assets.add('js', tabs_js, 'admin', 2) %}
+        {% do assets.add('js', tabs_js, 'admin', 5) %}
 
         <nav class="tabs__nav w-full">
             <div class="flex bg-dark text-white">
@@ -33,7 +33,7 @@
                             {% set field_id = form.getElementID(element) %}
                             {% set field_value = form.getElementValue(element, values, properties) %}
 
-                            {% include "plugins/form/templates/fields/fields.html" %}
+                            {% include "plugins/form/fieldsets/fields/fields.html" %}
 
                         {% endfor %}
                     </div>
@@ -47,7 +47,7 @@
             {% set field_id = form.getElementID(element) %}
             {% set field_value = form.getElementValue(element, values, properties) %}
 
-            {% include "plugins/form/templates/fields/fields.html" %}
+            {% include "plugins/form/fieldsets/fields/fields.html" %}
 
         {% endfor %}
     {% endif %}
