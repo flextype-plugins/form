@@ -19,22 +19,19 @@
     "url": "https://github.com/flextype-plugins/form/issues"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.0.6",
-    "animate.css": "^3.7.2",
-    "codemirror": "~5.51.0",
-    "flatpickr": "^4.6.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-purgecss": "^2.0.6",
     "gulp-sourcemaps": "^2.6.5",
-    "jquery": "^3.4.1",
+    "gulp-postcss": "^8.0.0",
+    "animate.css": "^3.7.2",
+    "codemirror": "~5.51.0",
+    "flatpickr": "^4.6.3",
     "parsleyjs": "^2.9.2",
     "postcss-import": "^12.0.1",
-    "select2": "^4.0.13",
     "tailwindcss": "^1.2.0",
+    "select2": "^4.0.13",
     "trumbowyg": "~2.21.0"
   }
 }

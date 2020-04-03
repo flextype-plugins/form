@@ -27,7 +27,7 @@ const tailwindConfig = "tailwind.config.js";
          cascade: false
      }))
      .pipe(csso())
-     .pipe(concat('vendor-build.min.css'))
+     .pipe(concat('form-vendor-build.min.css'))
      .pipe(gulp.dest("assets/dist/css/"));
  });
 
@@ -36,33 +36,17 @@ const tailwindConfig = "tailwind.config.js";
  * Task: gulp admin-panel-css
  */
 gulp.task('form-css', function() {
-  const atimport = require("postcss-import");
-  const postcss = require("gulp-postcss");
-  const tailwindcss = require("tailwindcss");
-  const purgecss = require("gulp-purgecss");
   const concat = require('gulp-concat');
   const csso = require('gulp-csso');
   const sourcemaps = require('gulp-sourcemaps');
+  const atimport = require("postcss-import");
+  const postcss = require("gulp-postcss");
   const autoprefixer = require('gulp-autoprefixer');
+  const tailwindcss = require("tailwindcss");
 
   return gulp
-    .src([
-           // Form CSS
-          'assets/src/form.css'])
+    .src(['assets/src/form.css'])
     .pipe(postcss([atimport(), tailwindcss(tailwindConfig)]))
-    .pipe(
-      purgecss({
-        content: ["fieldsets/**/*.html"],
-        extractors: [
-          {
-            extractor: TailwindExtractor = (content) => {
-                return content.match(/[\w-/:]+(?<!:)/g) || [];
-            },
-            extensions: ["html"]
-          }
-        ]
-      })
-    )
     .pipe(autoprefixer({
         overrideBrowserslist: [
             "last 1 version"
@@ -73,6 +57,30 @@ gulp.task('form-css', function() {
     .pipe(concat('form-build.min.css'))
     .pipe(gulp.dest("assets/dist/css/"));
 });
+
+/**
+ * Task: gulp form-js
+ */
+ gulp.task('form-js', function(){
+   const sourcemaps = require('gulp-sourcemaps');
+   const concat = require('gulp-concat');
+
+   return gulp.src([
+                    'assets/src/flatpickr/flatpickr.js',
+                    'assets/src/select/select.js',
+                    'assets/src/select-media/select-media.js',
+                    'assets/src/select-routable/select-routable.js',
+                    'assets/src/select-tags/select-tags.js',
+                    'assets/src/select-template/select-template.js',
+                    'assets/src/select-visibility/select-visibility.js',
+                    'assets/src/tabs/tabs.js',
+                    'assets/src/trumbowyg/trumbowyg.js',
+                 ])
+     .pipe(sourcemaps.init())
+     .pipe(concat('form-build.min.js'))
+     .pipe(sourcemaps.write())
+     .pipe(gulp.dest('assets/dist/js/'));
+ });
 
 /**
  * Task: gulp vendor-js
@@ -94,7 +102,7 @@ gulp.task('form-css', function() {
                     'node_modules/trumbowyg/dist/plugins/table/trumbowyg.table.min.js'
                  ])
      .pipe(sourcemaps.init())
-     .pipe(concat('form-build.min.js'))
+     .pipe(concat('form-vendor-build.min.js'))
      .pipe(sourcemaps.write())
      .pipe(gulp.dest('assets/dist/js/'));
  });
@@ -126,13 +134,21 @@ gulp.task('flatpickr-langs', function(){
 /**
  * Task: gulp default
  */
-gulp.task('default', gulp.series(
-    'trumbowyg-fonts', 'trumbowyg-langs', 'flatpickr-langs', 'vendor-css', 'form-css', 'vendor-js'
+gulp.task('default',
+    gulp.series(
+        'trumbowyg-fonts',
+        'trumbowyg-langs',
+        'flatpickr-langs',
+        'vendor-css',
+        'form-css',
+        'vendor-js',
+        'form-js'
 ));
 
 /**
  * Task: gulp watch
  */
 gulp.task('watch', function () {
-    gulp.watch(["fieldsets/**/*.html", "assets/src/"], gulp.series('vendor-css', 'form-css'));
+    gulp.watch(["fieldsets/**/*.html", "assets/src/"],
+    gulp.series('vendor-css', 'form-css'));
 });
