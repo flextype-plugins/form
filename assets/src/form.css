@@ -2,13 +2,10 @@
  * ADMIN PANEL
  */
 
-@import 'tailwindcss/base';
-
 /* Base */
 @import 'base/variables';
 @import 'base/common';
 @import 'base/content';
-@import 'base/icons';
 
 /* Vendor modules */
 @import 'tabs/tabs';
@@ -16,5 +13,4 @@
 @import 'trumbowyg/trumbowyg';
 @import 'flatpickr/flatpickr';
 
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'base/grid';

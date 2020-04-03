@@ -1,38 +1,73 @@
+/* purgecss start ignore */
+.tabs__nav
+{
+    width: 100%;
+}
+
 .tabs__nav > div
 {
-    @apply rounded border border-solid border-dark text-white bg-dark cursor-pointer mb-6;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #16171a;
+  color: #ffffff;
+  background-color: #16171a;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
 }
 
 .tabs__nav > div a:first-of-type
 {
-    @apply rounded-l;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 
 .tabs__nav > div a:last-of-type
 {
-    @apply rounded-r;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
 .tabs__content
 {
-    @apply hidden rounded;
+  width: 100%;
+  display: none;
+  border-radius: 0.25rem;
 }
 
 .tabs__content--active
 {
-    @apply block;
+  display: block;
+}
+
+.tabs__nav__links
+{
+    display: flex;
+    background-color: #16171a;
+    color: #ffffff;
 }
 
 .tabs__nav__link
 {
-    flex-basis: 0;
-    flex-grow: 1;
-
-    @apply block text-white text-center opacity-80 py-2;
+  flex-basis: 0;
+  flex-grow: 1;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  opacity: .8;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .tabs__nav__link:hover,
 .tabs__nav__link--active
 {
-    @apply bg-dark-muted opacity-100;
+  background-color: #292b30;
+  opacity: 1;
 }
+
+.tabs
+{
+    display: flex;
+}
+/* purgecss end ignore */

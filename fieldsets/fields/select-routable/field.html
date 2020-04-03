@@ -10,6 +10,3 @@
         <small>{{ properties.help }}</small>
     {% endif %}
 </div>
-
-{% set select_routable_js = url() ~ '/site/plugins/form/assets/src/select-routable/select-routable.js' %}
-{% do assets.add('js', select_routable_js, 'admin', 2) %}

@@ -10,6 +10,3 @@
         <small>{{ properties.help }}</small>
     {% endif %}
 </div>
-
-{% set select_visibility_js = url() ~ '/site/plugins/form/assets/src/select-visibility/select-visibility.js' %}
-{% do assets.add('js', select_visibility_js, 'admin', 2) %}

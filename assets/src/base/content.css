@@ -1,27 +1,25 @@
-.content
+.form-control-title
 {
-    position: relative;
-
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-
-    max-width: calc(100% - var(--box-size));
-    height: 100vh;
-    margin-left: var(--box-size);
+    @apply font-bold block mb-1 text-dark;
 }
 
-.content .bars
+.form-control
 {
-    position: fixed;
-    z-index: 20;
-    top: 0;
-
-    width: calc(100% - var(--box-size));
+    @apply w-full block border rounded border-gray-600 outline-none px-2 py-2;
 }
 
+.form-control:active,
+.form-control:focus
+{
+    @apply border-dark;
+}
 
-.row
+.form-group
+{
+    @apply mb-4;
+}
+
+.form-row
 {
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +28,7 @@
     margin-left: -10px;
 }
 
-.col
+.form-col
 {
     position: relative;
 
