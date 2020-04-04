@@ -36,13 +36,17 @@ $flextype->twig->addExtension(new FormTwigExtension($flextype));
 $_admin_css = ($flextype['registry']->has('assets.admin.css')) ? $flextype['registry']->get('assets.admin.css') : [];
 $_site_css  = ($flextype['registry']->has('assets.site.css')) ? $flextype['registry']->get('assets.site.css') : [];
 
-$flextype['registry']->set('assets.admin.css',
-                       array_merge($_admin_css, ['site/plugins/form/assets/dist/css/form-vendor-build.min.css',
-                        'site/plugins/form/assets/dist/css/form-build.min.css']));
+if ($flextype['registry']->get('plugins.form.settings.load_on_admin')) {
+    $flextype['registry']->set('assets.admin.css',
+                           array_merge($_admin_css, ['site/plugins/form/assets/dist/css/form-vendor-build.min.css',
+                            'site/plugins/form/assets/dist/css/form-build.min.css']));
+}
 
-$flextype['registry']->set('assets.site.css',
-                       array_merge($_site_css, ['site/plugins/form/assets/dist/css/form-vendor-build.min.css',
-                        'site/plugins/form/assets/dist/css/form-build.min.css']));
+if ($flextype['registry']->get('plugins.form.settings.load_on_site')) {
+    $flextype['registry']->set('assets.site.css',
+                           array_merge($_site_css, ['site/plugins/form/assets/dist/css/form-vendor-build.min.css',
+                            'site/plugins/form/assets/dist/css/form-build.min.css']));
+}
 
 if ($flextype['registry']->get('flextype.locale') == 'en_US') {
     $_locale = 'en';
@@ -61,14 +65,18 @@ if ($_locale != 'en') {
 $_admin_js = ($flextype['registry']->has('assets.admin.js')) ? $flextype['registry']->get('assets.admin.js') : [];
 $_site_js  = ($flextype['registry']->has('assets.site.js')) ? $flextype['registry']->get('assets.site.js') : [];
 
-$flextype['registry']->set('assets.admin.js',
-                       array_merge($_admin_js, ['site/plugins/form/assets/dist/js/form-vendor-build.min.js',
-                       $trumbowyg_locale_js,
-                       $flatpickr_locale_js,
-                       'site/plugins/form/assets/dist/js/form-build.min.js']));
+if ($flextype['registry']->get('plugins.form.settings.load_on_admin')) {
+    $flextype['registry']->set('assets.admin.js',
+                           array_merge($_admin_js, ['site/plugins/form/assets/dist/js/form-vendor-build.min.js',
+                           $trumbowyg_locale_js,
+                           $flatpickr_locale_js,
+                           'site/plugins/form/assets/dist/js/form-build.min.js']));
+}
 
-$flextype['registry']->set('assets.site.js',
-                       array_merge($_site_js, ['site/plugins/form/assets/dist/js/form-vendor-build.min.js',
-                       $trumbowyg_locale_js,
-                       $flatpickr_locale_js,
-                       'site/plugins/form/assets/dist/js/form-build.min.js']));
+if ($flextype['registry']->get('plugins.form.settings.load_on_site')) {
+    $flextype['registry']->set('assets.site.js',
+                           array_merge($_site_js, ['site/plugins/form/assets/dist/js/form-vendor-build.min.js',
+                           $trumbowyg_locale_js,
+                           $flatpickr_locale_js,
+                           'site/plugins/form/assets/dist/js/form-build.min.js']));
+}

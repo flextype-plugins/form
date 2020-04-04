@@ -111,7 +111,7 @@ gulp.task('form-css', function() {
  * Task: gulp trumbowyg-fonts
  */
 gulp.task('trumbowyg-fonts', function(){
-    return gulp.src(['node_modules/trumbowyg/dist/ui/icons.svg'])
+    return gulp.src(['node_modules/jquery/dist/ui/icons.svg'])
         .pipe(gulp.dest('assets/dist/fonts/trumbowyg'));
 });
 
