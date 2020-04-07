@@ -14,3 +14,4 @@ dependencies:
   flextype: 0.9.7
   plugins:
     twig: 1.0.0
+    jquery: 1.0.0
