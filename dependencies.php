@@ -48,10 +48,10 @@ if ($flextype['registry']->get('plugins.form.settings.load_on_site')) {
                             'site/plugins/form/assets/dist/css/form-build.min.css']));
 }
 
-if ($flextype['registry']->get('flextype.locale') == 'en_US') {
+if ($flextype['registry']->get('flextype.settings.locale') == 'en_US') {
     $_locale = 'en';
 } else {
-    $_locale = substr(strtolower($flextype['registry']->get('flextype.locale')), 0, 2);
+    $_locale = substr(strtolower($flextype['registry']->get('flextype.settings.locale')), 0, 2);
 }
 
 if ($_locale != 'en') {

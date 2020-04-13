@@ -6,11 +6,11 @@
     {% endif %}
 </div>
 
-{% if registry.get('flextype.locale') == 'en_US' %}
+{% if registry.get('flextype.settings.locale') == 'en_US' %}
     {% set flatpickr_locale = 'en' %}
 {% else %}
-    {% set flatpickr_locale = registry.get('flextype.locale')|lower|slice(0, 2) %}
+    {% set flatpickr_locale = registry.get('flextype.settings.locale')|lower|slice(0, 2) %}
 {% endif %}
 
-<input type="hidden" name="flatpickr-date-format" value="{{ registry.get('flextype.date_format') }}">
+<input type="hidden" name="flatpickr-date-format" value="{{ registry.get('flextype.settings.date_format') }}">
 <input type="hidden" name="flatpickr-locale" value="{{ flatpickr_locale }}">
