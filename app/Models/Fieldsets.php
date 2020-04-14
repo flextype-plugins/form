@@ -28,6 +28,10 @@ class Fieldsets
     public function __construct($flextype)
     {
         $this->flextype = $flextype;
+
+        if (! Filesystem::has($this->getDirLocation())) {
+            Filesystem::createDir($this->getDirLocation());
+        }
     }
 
     /**
