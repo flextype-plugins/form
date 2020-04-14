@@ -1,4 +1,4 @@
-{% set templates = filesystem_list_contents(PATH_THEMES ~ '/' ~ registry.flextype.theme ~ '/templates/') %}
+{% set templates = filesystem_list_contents(PATH_SITE ~ '/' ~ registry.get('site.settings.theme') ~ '/templates/' %}
 <div class="form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
     <label for="{{ field_id }}" class="form-control-title">{{ tr(properties.title) }}</label>
     <select class="form-control {{ properties.class }} js-select-template" name="{{ field_name }}">
