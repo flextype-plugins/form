@@ -32,6 +32,10 @@ class Fieldsets
         if (! Filesystem::has($this->getDirLocation())) {
             Filesystem::createDir($this->getDirLocation());
         }
+
+        if (! Filesystem::has($this->getFileLocation('default'))) {
+            Filesystem::copy(PATH['site'] . '/plugins/form/fieldsets/samples/default/default.yaml', $this->getFileLocation('default'));
+        }
     }
 
     /**
