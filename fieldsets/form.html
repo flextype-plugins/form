@@ -4,16 +4,16 @@
 
     {% if fieldset.sections %}
 
-        <nav class="tabs__nav">
-            <div class="tabs__nav__links">
+        <nav class="form-tabs__nav">
+            <div class="form-tabs__nav__links">
                 {% for key, section in fieldset.sections %}
-                    <a href="javascript:;" class="tabs__nav__link {% if key == 'main' %} tabs__nav__link--active {% endif %}">{{ tr(section.title) }}</a>
+                    <a href="javascript:;" class="form-tabs__nav__link {% if key == 'main' %} form-tabs__nav__link--active {% endif %}">{{ tr(section.title) }}</a>
                 {% endfor %}
             </div>
         </nav>
-        <div class="tabs">
+        <div class="form-tabs">
             {% for key, section in fieldset.sections %}
-                <div class="tabs__content {% if key == 'main' %} tabs__content--active {% endif %}">
+                <div class="form-tabs__content {% if key == 'main' %} form-tabs__content--active {% endif %}">
                     <div class="form-row">
                         {% for element, properties in section.form.fields  %}
 
@@ -42,6 +42,6 @@
     {% endif %}
 
     {% if fieldset.form.submit %}
-        <input type="submit" value="{{ fieldset.form.submit.title }}" class="{{ fieldset.form.submit.class }}">
+        <input type="submit" value="{{ fieldset.form.submit.title }}" class="form-button {{ fieldset.form.submit.class }}">
     {% endif %}
 </form>

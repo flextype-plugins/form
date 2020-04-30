@@ -1,9 +1,9 @@
-.tabs__nav
+.form-tabs__nav
 {
     width: 100%;
 }
 
-.tabs__nav > div
+.form-tabs__nav > div
 {
   border-radius: 0.25rem;
   border-width: 1px;
@@ -15,38 +15,38 @@
   margin-bottom: 1.5rem;
 }
 
-.tabs__nav > div a:first-of-type
+.form-tabs__nav > div a:first-of-type
 {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
 
-.tabs__nav > div a:last-of-type
+.form-tabs__nav > div a:last-of-type
 {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
 
-.tabs__content
+.form-tabs__content
 {
   width: 100%;
   display: none;
   border-radius: 0.25rem;
 }
 
-.tabs__content--active
+.form-tabs__content--active
 {
   display: block;
 }
 
-.tabs__nav__links
+.form-tabs__nav__links
 {
     display: flex;
     background-color: #16171a;
     color: #ffffff;
 }
 
-.tabs__nav__link
+.form-tabs__nav__link
 {
   flex-basis: 0;
   flex-grow: 1;
@@ -58,14 +58,14 @@
   padding-bottom: 0.5rem;
 }
 
-.tabs__nav__link:hover,
-.tabs__nav__link--active
+.form-tabs__nav__link:hover,
+.form-tabs__nav__link--active
 {
   background-color: #292b30;
   opacity: 1;
 }
 
-.tabs
+.form-tabs
 {
     display: flex;
 }

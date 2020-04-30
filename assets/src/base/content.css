@@ -36,3 +36,14 @@
     padding-right: 10px;
     padding-left: 10px;
 }
+
+.form-button
+{
+    @apply rounded px-4 py-2 border border-solid border-dark text-white inline-block w-auto bg-dark cursor-pointer;
+}
+
+.form-button:hover,
+.form-button--white:hover
+{
+    @apply border-black bg-dark text-white;
+}

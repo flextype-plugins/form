@@ -1,4 +1,4 @@
-$(".tabs__nav").on("click", ".tabs__nav__link:not(.tabs__nav__link--active)", function () {
-    $(this).addClass("tabs__nav__link--active").siblings().removeClass("tabs__nav__link--active");
-    $("div.tabs__content").removeClass("tabs__content--active").eq($(this).index()).addClass("tabs__content--active");
+$(".form-tabs__nav").on("click", ".form-tabs__nav__link:not(.form-tabs__nav__link--active)", function () {
+    $(this).addClass("form-tabs__nav__link--active").siblings().removeClass("form-tabs__nav__link--active");
+    $("div.form-tabs__content").removeClass("form-tabs__content--active").eq($(this).index()).addClass("form-tabs__content--active");
 });

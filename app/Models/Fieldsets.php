@@ -34,7 +34,7 @@ class Fieldsets
         }
 
         if (! Filesystem::has($this->getFileLocation('default'))) {
-            Filesystem::copy(PATH['site'] . '/plugins/form/fieldsets/samples/default/default.yaml', $this->getFileLocation('default'));
+            Filesystem::copy(PATH['project'] . '/plugins/form/fieldsets/samples/default/default.yaml', $this->getFileLocation('default'));
         }
     }
 
@@ -53,7 +53,7 @@ class Fieldsets
 
         if (Filesystem::has($fieldset_file)) {
             if ($fieldset_body = Filesystem::read($fieldset_file)) {
-                if ($fieldset_decoded = $this->flextype['parser']->decode($fieldset_body, 'yaml')) {
+                if ($fieldset_decoded = $this->flextype['serializer']->decode($fieldset_body, 'yaml')) {
                     return $fieldset_decoded;
                 }
 
@@ -88,7 +88,7 @@ class Fieldsets
                     continue;
                 }
 
-                $fieldset_content                 = $this->flextype['parser']->decode(Filesystem::read($fieldset['path']), 'yaml');
+                $fieldset_content                 = $this->flextype['serializer']->decode(Filesystem::read($fieldset['path']), 'yaml');
                 $fieldsets[$fieldset['basename']] = $fieldset_content['title'];
             }
         }
@@ -127,7 +127,7 @@ class Fieldsets
         $fieldset_file = $this->getFileLocation($id);
 
         if (Filesystem::has($fieldset_file)) {
-            return Filesystem::write($fieldset_file, $this->flextype['parser']->encode($data, 'yaml'));
+            return Filesystem::write($fieldset_file, $this->flextype['serializer']->encode($data, 'yaml'));
         }
 
         return false;
@@ -148,7 +148,7 @@ class Fieldsets
         $fieldset_file = $this->getFileLocation($id);
 
         if (! Filesystem::has($fieldset_file)) {
-            return Filesystem::write($fieldset_file, $this->flextype['parser']->encode($data, 'yaml'));
+            return Filesystem::write($fieldset_file, $this->flextype['serializer']->encode($data, 'yaml'));
         }
 
         return false;
@@ -204,7 +204,7 @@ class Fieldsets
      */
     public function getDirLocation() : string
     {
-        return PATH['site'] . '/fieldsets/';
+        return PATH['project'] . '/fieldsets/';
     }
 
     /**
@@ -216,6 +216,6 @@ class Fieldsets
      */
     public function getFileLocation(string $id) : string
     {
-        return PATH['site'] . '/fieldsets/' . $id . '.yaml';
+        return PATH['project'] . '/fieldsets/' . $id . '.yaml';
     }
 }
