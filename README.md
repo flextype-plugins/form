@@ -31,7 +31,7 @@ Fieldsets are configuration files written in YAML for Admin Panel to create publ
 Form fields are an essential part of the fieldsets and have very powerful options.
 
 | Field type | Description |
-| --- | --- | --- | --- |
+| --- | --- |
 | `text` | The plain text field for short text blocks or a short paragraph of information related to a item–basic text content that doesn't need special formatting. <br><br> **Common uses**: Short-form text that doesn't need any formatting; Product titles; Event names |
 | `textarea` | While a plain text field is used for creating short-form, a textarea field is used for long-form content. <br><br> **Common uses**: Long-form text that doesn't need any formatting; Product descriptions; Event descriptions |
 | `html` | While a textarea field is used for creating long-form, unformatted text, a html field is used for long-form content that you can format. The html field gives your collaborators freedom to create and format your content. <br><br> **Common uses**: Most long-form content with links; Blog posts; Articles; Team member bios; Product description; Event details |
@@ -48,7 +48,7 @@ Form fields are an essential part of the fieldsets and have very powerful option
 
 ### <a name="field-properties"></a> Field properties
 
-| Property    | Type     | Default | Description |
+| Property | Type | Default | Description |
 | --- | --- | --- | --- |
 | title | string | | The field label title |
 | help | string | | Optional help text below the field |
