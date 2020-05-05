@@ -152,6 +152,25 @@ sections:
 {{ form.render(custom_form, {})|raw }}
 ```
 
+## Processing form in the backend
+ 
+```
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+
+$app->post('{uri:.+}', function(Request $request, Response $response) use ($flextype) {
+
+    // get post data
+    $post_data = $request->getParsedBody();
+
+    // save date from $post_data
+    $flextype['entries']->create($post_data['name'], ['title' => $post_data['name']]);
+
+    // redirect
+    return $response->withRedirect('./');
+});
+```
+
 ## LICENSE
 [The MIT License (MIT)](https://github.com/flextype-plugins/form/blob/master/LICENSE.txt)
 Copyright (c) 2018-2020 [Sergey Romanenko](https://github.com/Awilum)
