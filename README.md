@@ -65,59 +65,62 @@ icon: 'far fa-file-alt'
 sections:
   main:
     title: Main
-    fields:
-      title:
-        title: Title
-        type: text
-        size: 12
-        help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-      content:
-        title: Content
-        type: html
-        size: 12
-        help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-      template:
-        title: Template
-        type: template_select
-        size: 4/12
-        help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-      visibility:
-        title: Visibility
-        type: visibility_select
-        size: 4/12
-        help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-      published_at:
-        title: 'Published at'
-        type: datetimepicker
-        size: 4/12
-        help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+    form:
+      fields:
+        title:
+          title: Title
+          type: text
+          size: 12
+          help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+        content:
+          title: Content
+          type: html
+          size: 12
+          help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+        template:
+          title: Template
+          type: template_select
+          size: 4/12
+          help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+        visibility:
+          title: Visibility
+          type: visibility_select
+          size: 4/12
+          help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+        published_at:
+          title: 'Published at'
+          type: datetimepicker
+          size: 4/12
+          help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
   seo:
     title: Seo
-    fields:
-      description:
-        title: Description
-        type: textarea
-        size: 12
+    form:
+      fields:
+        description:
+          title: Description
+          type: textarea
+          size: 12
   menu:
     title: Menu
-    fields:
-      menu_item_title:
-        title: Item title
-        type: text
-        size: 4/12
-      menu_item_url:
-        title: Item url
-        type: text
-        size: 4/12
-      menu_item_target:
-        title: Item target
-        type: select
-        options: { _self: _self, _blank: _blank, _parent: _parent, _top: _top }
-        size: 4/12
-      menu_item_order:
-        title: Item order
-        type: text
-        size: 4/12
+    form:
+      fields:
+        menu_item_title:
+          title: Item title
+          type: text
+          size: 4/12
+        menu_item_url:
+          title: Item url
+          type: text
+          size: 4/12
+        menu_item_target:
+          title: Item target
+          type: select
+          options: { _self: _self, _blank: _blank, _parent: _parent, _top: _top }
+          size: 4/12
+        menu_item_order:
+          title: Item order
+          type: text
+          size: 4/12
 ```
 
 ## LICENSE
