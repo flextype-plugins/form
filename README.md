@@ -58,6 +58,8 @@ Form fields are an essential part of the fieldsets and have very powerful option
 
 ### Example
 
+`/project/fieldsets/default.yaml`
+
 ```yaml
 title: Default
 default_field: title
@@ -121,6 +123,33 @@ sections:
           title: Item order
           type: text
           size: 4/12
+```
+
+### Rendering forms in the TWIG templates
+
+```
+{% set custom_form = {
+    'form': {
+        'submit': {
+            'title': 'Submit'
+        },
+        'fields': {
+            'name': {
+                'title': 'Name',
+                'type': 'text',
+                'size': '12'
+            },
+            'message': {
+                'title': 'Message',
+                'type': 'textarea',
+                'size': '12'
+            }
+        }
+    }
+} %}
+
+
+{{ form.render(custom_form, {})|raw }}
 ```
 
 ## LICENSE
