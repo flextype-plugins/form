@@ -1,0 +1,16 @@
+name: Form
+version: 1.0.0
+description: Form Plugin to render user forms for Flextype.
+icon: fas fa-check-circle
+author:
+  name: Sergey Romanenko
+  email: support@flextype.org
+  url: https://flextype.org
+homepage: https://github.com/flextype-plugins/form
+bugs: https://github.com/flextype-plugins/form/issues
+license: MIT
+
+dependencies:
+  flextype: 0.9.8
+  twig: '>=1.0.0'
+  jquery: '>=1.0.0'

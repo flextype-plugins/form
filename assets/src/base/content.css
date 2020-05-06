@@ -1,0 +1,49 @@
+.form-control-title
+{
+    @apply font-bold block mb-1 text-dark;
+}
+
+.form-control
+{
+    @apply w-full block border rounded border-gray-600 outline-none px-2 py-2;
+}
+
+.form-control:active,
+.form-control:focus
+{
+    @apply border-dark;
+}
+
+.form-group
+{
+    @apply mb-4;
+}
+
+.form-row
+{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.form-col
+{
+    position: relative;
+
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.form-button
+{
+    @apply rounded px-4 py-2 border border-solid border-dark text-white inline-block w-auto bg-dark cursor-pointer;
+}
+
+.form-button:hover,
+.form-button--white:hover
+{
+    @apply border-black bg-dark text-white;
+}

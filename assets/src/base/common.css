@@ -1,0 +1,11 @@
+input:focus,
+button:focus,
+button:active {
+    outline: none;
+}
+
+.form-heading {
+     font-size: 1.875rem;
+     border-bottom-width: 1px;
+     border-color: #000000;
+}

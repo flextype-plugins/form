@@ -1,0 +1,47 @@
+<form action="" method="post" id="form">
+    {{ csrf() }}
+    <input type="hidden" id="action" name="action" value="save-form">
+
+    {% if fieldset.sections %}
+
+        <nav class="form-tabs__nav">
+            <div class="form-tabs__nav__links">
+                {% for key, section in fieldset.sections %}
+                    <a href="javascript:;" class="form-tabs__nav__link {% if key == 'main' %} form-tabs__nav__link--active {% endif %}">{{ tr(section.title) }}</a>
+                {% endfor %}
+            </div>
+        </nav>
+        <div class="form-tabs">
+            {% for key, section in fieldset.sections %}
+                <div class="form-tabs__content {% if key == 'main' %} form-tabs__content--active {% endif %}">
+                    <div class="form-row">
+                        {% for element, properties in section.form.fields  %}
+
+                            {% set field_name = form.getElementName(element) %}
+                            {% set field_id = form.getElementID(element) %}
+                            {% set field_value = form.getElementValue(element, values, properties) %}
+
+                            {% include "plugins/form/fieldsets/fields/fields.html" %}
+
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="form-row">
+        {% for element, properties in fieldset.form.fields  %}
+
+            {% set field_name = form.getElementName(element) %}
+            {% set field_id = form.getElementID(element) %}
+            {% set field_value = form.getElementValue(element, values, properties) %}
+
+            {% include "plugins/form/fieldsets/fields/fields.html" %}
+        {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if fieldset.form.submit %}
+        <input type="submit" value="{{ fieldset.form.submit.title }}" class="form-button {{ fieldset.form.submit.class }}">
+    {% endif %}
+</form>
