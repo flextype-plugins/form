@@ -38,14 +38,14 @@ $_site_css  = ($flextype['registry']->has('assets.site.css')) ? $flextype['regis
 
 if ($flextype['registry']->get('plugins.form.settings.load_on_admin')) {
     $flextype['registry']->set('assets.admin.css',
-                           array_merge($_admin_css, ['site/plugins/form/assets/dist/css/form-vendor-build.min.css',
-                            'site/plugins/form/assets/dist/css/form-build.min.css']));
+                           array_merge($_admin_css, ['project/plugins/form/assets/dist/css/form-vendor-build.min.css',
+                            'project/plugins/form/assets/dist/css/form-build.min.css']));
 }
 
 if ($flextype['registry']->get('plugins.form.settings.load_on_site')) {
     $flextype['registry']->set('assets.site.css',
-                           array_merge($_site_css, ['site/plugins/form/assets/dist/css/form-vendor-build.min.css',
-                            'site/plugins/form/assets/dist/css/form-build.min.css']));
+                           array_merge($_site_css, ['project/plugins/form/assets/dist/css/form-vendor-build.min.css',
+                            'project/plugins/form/assets/dist/css/form-build.min.css']));
 }
 
 if ($flextype['registry']->get('flextype.settings.locale') == 'en_US') {
@@ -55,8 +55,8 @@ if ($flextype['registry']->get('flextype.settings.locale') == 'en_US') {
 }
 
 if ($_locale != 'en') {
-    $trumbowyg_locale_js = 'site/plugins/admin/assets/dist/lang/trumbowyg/langs/' . $_locale . '.min.js';
-    $flatpickr_locale_js = 'site/plugins/admin/assets/dist/lang/flatpickr/l10n/' . $_locale . '.min.js';
+    $trumbowyg_locale_js = 'project/plugins/admin/assets/dist/lang/trumbowyg/langs/' . $_locale . '.min.js';
+    $flatpickr_locale_js = 'project/plugins/admin/assets/dist/lang/flatpickr/l10n/' . $_locale . '.min.js';
 } else {
     $trumbowyg_locale_js = '';
     $flatpickr_locale_js = '';
@@ -67,16 +67,16 @@ $_site_js  = ($flextype['registry']->has('assets.site.js')) ? $flextype['registr
 
 if ($flextype['registry']->get('plugins.form.settings.load_on_admin')) {
     $flextype['registry']->set('assets.admin.js',
-                           array_merge($_admin_js, ['site/plugins/form/assets/dist/js/form-vendor-build.min.js',
+                           array_merge($_admin_js, ['project/plugins/form/assets/dist/js/form-vendor-build.min.js',
                            $trumbowyg_locale_js,
                            $flatpickr_locale_js,
-                           'site/plugins/form/assets/dist/js/form-build.min.js']));
+                           'project/plugins/form/assets/dist/js/form-build.min.js']));
 }
 
 if ($flextype['registry']->get('plugins.form.settings.load_on_site')) {
     $flextype['registry']->set('assets.site.js',
-                           array_merge($_site_js, ['site/plugins/form/assets/dist/js/form-vendor-build.min.js',
+                           array_merge($_site_js, ['project/plugins/form/assets/dist/js/form-vendor-build.min.js',
                            $trumbowyg_locale_js,
                            $flatpickr_locale_js,
-                           'site/plugins/form/assets/dist/js/form-build.min.js']));
+                           'project/plugins/form/assets/dist/js/form-build.min.js']));
 }

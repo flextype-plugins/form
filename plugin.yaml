@@ -5,13 +5,12 @@ icon: fas fa-check-circle
 author:
   name: Sergey Romanenko
   email: support@flextype.org
-  url: http://flextype.org
+  url: https://flextype.org
 homepage: https://github.com/flextype-plugins/form
 bugs: https://github.com/flextype-plugins/form/issues
 license: MIT
 
 dependencies:
-  flextype: 0.9.7
-  plugins:
-    twig: 1.0.0
-    jquery: 1.0.0
+  flextype: 0.9.8
+  twig: '>=1.0.0'
+  jquery: '>=1.0.0'

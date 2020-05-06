@@ -1,4 +1,4 @@
-title: Default
+title: Page
 default_field: title
 icon: 'far fa-file-alt'
 sections:
@@ -25,6 +25,10 @@ sections:
           title: admin_description
           type: textarea
           size: 12
+        template:
+          title: admin_template
+          type: select_template
+          size: 4/12
         visibility:
           title: admin_visibility
           type: select_visibility
@@ -36,4 +40,24 @@ sections:
         routable:
           title: admin_routable
           type: select_routable
+          size: 4/12
+        menu_heading:
+          title: admin_menu
+          type: heading
+        menu_item_title:
+          title: admin_menu_item_title
+          type: text
+          size: 4/12
+        menu_item_url:
+          title: admin_menu_item_url
+          type: text
+          size: 4/12
+        menu_item_target:
+          title: admin_menu_item_target
+          type: select
+          options: { _self: _self, _blank: _blank, _parent: _parent, _top: _top }
+          size: 4/12
+        menu_item_order:
+          title: admin_menu_item_order
+          type: text
           size: 4/12
