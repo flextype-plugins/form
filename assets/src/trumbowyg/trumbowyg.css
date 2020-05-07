@@ -50,3 +50,9 @@
   margin: 0;
   background-color: #ffffff;
 }
+
+.html-editor {
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
