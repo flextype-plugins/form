@@ -38,10 +38,10 @@ Form fields are an essential part of the fieldsets and have very powerful option
 | `hidden` | The hidden field is like the text field, except it's hidden from the content editor. |
 | `heading` | The heading field helps to group larger sets of fields. |
 | `select` | A simple selectbox field. |
-| `template_select` | Template select field for selecting entry template. |
-| `visibility_select` | Visibility select field for selecting entry visibility state. |
-| `routable_select` | Routable select field for selection entry routable state. |
-| `media_select` | Media select field for selection media for entry. |
+| `select_template` | Template select field for selecting entry template. |
+| `select_visibility` | Visibility select field for selecting entry visibility state. |
+| `selectroutable` | Routable select field for selection entry routable state. |
+| `select_media` | Media select field for selection media for entry. |
 | `tags` | An interactive tags input field. |
 | `datetimepicker` | The datetimepicker field lets you specify a date and time. |
 
@@ -81,12 +81,12 @@ sections:
           help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
         template:
           title: Template
-          type: template_select
+          type: select_template
           size: 4/12
           help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
         visibility:
           title: Visibility
-          type: visibility_select
+          type: select_visibility
           size: 4/12
           help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
         published_at:
