@@ -1,3 +1,10 @@
+<a name="1.0.4"></a>
+# [1.0.4](https://github.com/flextype-plugins/form/compare/v1.0.3...v1.0.4) (2020-05-20)
+
+### Bug Fixes
+
+* **fieldsets:** fix method rename()
+
 <a name="1.0.3"></a>
 # [1.0.3](https://github.com/flextype-plugins/form/compare/v1.0.2...v1.0.3) (2020-05-19)
 
