@@ -40,7 +40,7 @@ Form fields are an essential part of the fieldsets and have very powerful option
 | `select` | A simple selectbox field. |
 | `select_template` | Template select field for selecting entry template. |
 | `select_visibility` | Visibility select field for selecting entry visibility state. |
-| `selectroutable` | Routable select field for selection entry routable state. |
+| `select_routable` | Routable select field for selection entry routable state. |
 | `select_media` | Media select field for selection media for entry. |
 | `tags` | An interactive tags input field. |
 | `datetimepicker` | The datetimepicker field lets you specify a date and time. |

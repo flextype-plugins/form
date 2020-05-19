@@ -55,8 +55,8 @@ if ($flextype['registry']->get('flextype.settings.locale') == 'en_US') {
 }
 
 if ($_locale != 'en') {
-    $trumbowyg_locale_js = 'project/plugins/admin/assets/dist/lang/trumbowyg/langs/' . $_locale . '.min.js';
-    $flatpickr_locale_js = 'project/plugins/admin/assets/dist/lang/flatpickr/l10n/' . $_locale . '.min.js';
+    $trumbowyg_locale_js = 'project/plugins/form/assets/dist/lang/trumbowyg/langs/' . $_locale . '.min.js';
+    $flatpickr_locale_js = 'project/plugins/form/assets/dist/lang/flatpickr/l10n/' . $_locale . '.js';
 } else {
     $trumbowyg_locale_js = '';
     $flatpickr_locale_js = '';

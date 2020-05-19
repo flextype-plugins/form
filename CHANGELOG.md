@@ -1,3 +1,14 @@
+<a name="1.0.3"></a>
+# [1.0.3](https://github.com/flextype-plugins/form/compare/v1.0.2...v1.0.3) (2020-05-19)
+
+### Features
+
+* **core:** add new fieldsets samples `blog` and `blog-post`
+
+### Bug Fixes
+
+* **core:** fix flatpickr and trumbowyg localizations
+
 <a name="1.0.2"></a>
 # [1.0.2](https://github.com/flextype-plugins/form/compare/v1.0.1...v1.0.2) (2020-05-17)
 
