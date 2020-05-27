@@ -66,62 +66,39 @@ default_field: title
 icon: 'far fa-file-alt'
 sections:
   main:
-    title: Main
+    title: admin_main
     form:
       fields:
         title:
-          title: Title
+          title: admin_title
           type: text
           size: 12
-          help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
         content:
-          title: Content
+          title: admin_content
           type: html
           size: 12
-          help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-        template:
-          title: Template
-          type: select_template
-          size: 4/12
-          help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-        visibility:
-          title: Visibility
-          type: select_visibility
-          size: 4/12
-          help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-        published_at:
-          title: 'Published at'
-          type: datetimepicker
-          size: 4/12
-          help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-  seo:
-    title: Seo
+  settings:
+    title: admin_settings
     form:
       fields:
+        general_heading:
+          title: admin_general
+          type: heading
         description:
-          title: Description
+          title: admin_description
           type: textarea
           size: 12
-  menu:
-    title: Menu
-    form:
-      fields:
-        menu_item_title:
-          title: Item title
-          type: text
+        visibility:
+          title: admin_visibility
+          type: select_visibility
           size: 4/12
-        menu_item_url:
-          title: Item url
-          type: text
+        published_at:
+          title: admin_published_at
+          type: datetimepicker
           size: 4/12
-        menu_item_target:
-          title: Item target
-          type: select
-          options: { _self: _self, _blank: _blank, _parent: _parent, _top: _top }
-          size: 4/12
-        menu_item_order:
-          title: Item order
-          type: text
+        routable:
+          title: admin_routable
+          type: select_routable
           size: 4/12
 ```
 
@@ -152,7 +129,7 @@ sections:
 {{ form.render(custom_form, {})|raw }}
 ```
 
-## Processing form in the backend
+## Processing form in the Backend
 
 ```
 use Psr\Http\Message\ResponseInterface as Response;
