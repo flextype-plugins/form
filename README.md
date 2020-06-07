@@ -33,6 +33,8 @@ Form fields are an essential part of the fieldsets and have very powerful option
 | Field type | Description |
 | --- | --- |
 | `text` | The plain text field for short text blocks or a short paragraph of information related to a item–basic text content that doesn't need special formatting. <br><br> **Common uses**: Short-form text that doesn't need any formatting; Product titles; Event names |
+| `email` | The email field for email text blocks |
+| `password` | The password field for password text blocks |
 | `textarea` | While a plain text field is used for creating short-form, a textarea field is used for long-form content. <br><br> **Common uses**: Long-form text that doesn't need any formatting; Product descriptions; Event descriptions |
 | `html` | While a textarea field is used for creating long-form, unformatted text, a html field is used for long-form content that you can format. The html field gives your collaborators freedom to create and format your content. <br><br> **Common uses**: Most long-form content with links; Blog posts; Articles; Team member bios; Product description; Event details |
 | `hidden` | The hidden field is like the text field, except it's hidden from the content editor. |
@@ -54,7 +56,9 @@ Form fields are an essential part of the fieldsets and have very powerful option
 | help | string | | Optional help text below the field |
 | size | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
 | default | string | | Default value for the field, which will be used when entry is created |
-| attributes | array | | Any valid HTML attributes. For e.g. id, class, and etc... |
+| class | string | | CSS class |
+| validation.required | boolean | | Set is this field required or not. Set `true` or `false` |
+| validation.pattern | string | | Validation pattern |
 
 ### Example
 
