@@ -1,6 +1,12 @@
 <div class="form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
     <label for="{{ field_id }}" class="form-control-title">{{ tr(properties.title) }}</label>
-    <input type="text" id="{{ field_id }}" name="{{ field_id }}" value="{{ field_value }}" class="form-control {{ properties.class }}">
+    <input type="text"
+           id="{{ field_id }}"
+           name="{{ field_id }}"
+           value="{{ field_value }}"
+           class="form-control {{ properties.class }}"
+           {% if properties.validation.required %}required="required"{% endif %}
+           {% if properties.validation.pattern %}pattern="{{ properties.validation.pattern }}"{% endif %}>
     {% if properties.help %}
         <small>{{ properties.help }}</small>
     {% endif %}
