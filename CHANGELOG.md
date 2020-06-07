@@ -1,3 +1,19 @@
+<a name="1.0.6"></a>
+# [1.0.6](https://github.com/flextype-plugins/form/compare/v1.0.5...v1.0.6) (2020-06-07)
+
+### Features
+
+* **feat(fields):** add new fields `email` and `password`
+* **feat(fields):** add basic html validation for fields `text, email, password, textarea`
+
+    Usage:
+
+    ```
+      validation:
+        required: true
+        pattern: '(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
+    ```
+
 <a name="1.0.5"></a>
 # [1.0.5](https://github.com/flextype-plugins/form/compare/v1.0.4...v1.0.5) (2020-05-27)
 
