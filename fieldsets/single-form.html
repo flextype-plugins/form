@@ -1,0 +1,20 @@
+<form action="{% if fieldset.form.action %}{{ path_for(fieldset.form.action) }}{% endif %}"
+      method="{% if fieldset.form.method %}{{ fieldset.form.method }}{% else %}post{% endif %}"
+      {% if fieldset.form.id %}id="form-{{ fieldset.form.id }}"{% endif %}
+      {% if fieldset.form.name %}id="form-{{ fieldset.form.name }}"{% endif %}>
+    {{ csrf() }}
+    <input type="hidden" id="form-save-action" name="form-save-action" value="form-save-action">
+    <div class="form-row">
+    {% for element, properties in fieldset.form.fields  %}
+
+        {% set field_name = form.getElementName(element) %}
+        {% set field_id = form.getElementID(element) %}
+        {% set field_value = form.getElementValue(element, values, properties) %}
+
+        {% include "plugins/form/fieldsets/fields/fields.html" %}
+    {% endfor %}
+    </div>
+    {% if fieldset.form.submit %}
+        <input type="submit" value="{{ tr(fieldset.form.submit.title) }}" class="form-button {{ fieldset.form.submit.class }}">
+    {% endif %}
+</form>
