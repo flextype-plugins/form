@@ -1,10 +1,11 @@
 title: Default
 default_field: title
 icon: 'far fa-file-alt'
-sections:
-  main:
-    title: admin_main
-    form:
+size: 12
+form:
+  tabs:
+    main:
+      title: admin_main
       fields:
         title:
           title: admin_title
@@ -14,9 +15,8 @@ sections:
           title: admin_content
           type: html
           size: 12
-  settings:
-    title: admin_settings
-    form:
+    settings:
+      title: admin_settings
       fields:
         general_heading:
           title: admin_general

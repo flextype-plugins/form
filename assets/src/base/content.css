@@ -1,3 +1,9 @@
+.form-wrapper,
+.form-wrapper.form-col {
+    padding: 0;
+    margin: 0;
+}
+
 .form-control-title
 {
     @apply font-bold block mb-1 text-dark;

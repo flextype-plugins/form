@@ -68,10 +68,17 @@ Form fields are an essential part of the fieldsets and have very powerful option
 title: Default
 default_field: title
 icon: 'far fa-file-alt'
-sections:
-  main:
-    title: admin_main
-    form:
+size: 12
+form:
+  name: default
+  id: default
+  method: post
+  submit:
+    title: Submit
+    class: 'custom-button'
+  tabs:
+    main:
+      title: admin_main
       fields:
         title:
           title: admin_title
@@ -81,9 +88,8 @@ sections:
           title: admin_content
           type: html
           size: 12
-  settings:
-    title: admin_settings
-    form:
+    settings:
+      title: admin_settings
       fields:
         general_heading:
           title: admin_general
@@ -109,28 +115,9 @@ sections:
 ### Rendering forms in the TWIG templates
 
 ```
-{% set custom_form = {
-    'form': {
-        'submit': {
-            'title': 'Submit'
-        },
-        'fields': {
-            'name': {
-                'title': 'Name',
-                'type': 'text',
-                'size': '12'
-            },
-            'message': {
-                'title': 'Message',
-                'type': 'textarea',
-                'size': '12'
-            }
-        }
-    }
-} %}
+{% set registration_form = PATH_PROJECT ~ '/fieldsets/default.yaml' %}
 
-
-{{ form.render(custom_form, {})|raw }}
+{{ form.render(serializer_decode(filesystem_read(registration_form), 'yaml'), {})|raw }}
 ```
 
 ## Processing form in the Backend
@@ -149,7 +136,7 @@ $app->post('{uri:.+}', function(Request $request, Response $response) use ($flex
 
     // redirect
     return $response->withRedirect('./');
-});
+})->add('csrf');
 ```
 
 ## LICENSE
