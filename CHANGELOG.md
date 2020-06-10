@@ -1,3 +1,16 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/flextype-plugins/form/compare/v1.0.6...v1.1.0) (2020-06-10)
+
+### Features
+
+* add new `size` property for form layout.
+* add `validation.required` and `validation.pattern` for basic html validation.
+* add new fields `name`, `id`, `method`, `submit` for form.
+
+### BREAKING CHANGES
+
+- remove `sections`, use `form.tabs` instead for forms.
+
 <a name="1.0.6"></a>
 # [1.0.6](https://github.com/flextype-plugins/form/compare/v1.0.5...v1.0.6) (2020-06-07)
 

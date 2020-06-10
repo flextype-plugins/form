@@ -1,16 +1,16 @@
 title: Blog
 default_field: title
 hide: false
-sections:
-  main:
-    title: Main
-    form:
+size: 12
+form:
+  tabs:
+    main:
+      title: Main
       fields:
         title: { title: admin_title, type: text, size: 12 }
         entries_limit: { title: admin_entries_limit, type: text, size: 4/12 }
-  settings:
-    title: admin_settings
-    form:
+    settings:
+      title: admin_settings
       fields:
         general_heading: { title: admin_general, type: heading }
         description: { title: admin_description, type: textarea, size: 12 }
