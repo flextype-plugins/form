@@ -1,3 +1,10 @@
+<a name="1.1.1"></a>
+# [1.1.1](https://github.com/flextype-plugins/form/compare/v1.1.0...v1.1.1) (2020-06-10)
+
+### Bug Fixes
+
+* **fieldsets:** fix translating titles for form submit button.
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/flextype-plugins/form/compare/v1.0.6...v1.1.0) (2020-06-10)
 
@@ -16,8 +23,8 @@
 
 ### Features
 
-* **feat(fields):** add new fields `email` and `password`
-* **feat(fields):** add basic html validation for fields `text, email, password, textarea`
+* **fields:** add new fields `email` and `password`
+* **fields:** add basic html validation for fields `text, email, password, textarea`
 
     Usage:
 
