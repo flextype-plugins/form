@@ -73,9 +73,10 @@ form:
   name: default
   id: default
   method: post
-  submit:
-    title: Submit
-    class: 'custom-button'
+  buttons:
+    submit:
+      title: Submit
+      type: submit
   tabs:
     main:
       title: admin_main

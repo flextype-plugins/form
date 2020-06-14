@@ -19,7 +19,25 @@
             </div>
         </div>
     {% endfor %}
-    {% if fieldset.form.submit %}
-        <input type="submit" value="{{ tr(fieldset.form.submit.title) }}" class="form-button {{ fieldset.form.submit.class }}">
+    {% if fieldset.form.buttons %}
+        {% for key, button in fieldset.form.buttons %}
+            {% if button.type == 'submit' %}
+                <input type="submit" value="{{ __(button.title) }}" class="form-button {{ button.class }}">
+            {% endif %}
+            {% if button.type == 'button' %}
+                <a href="{{ button.href }}"
+                   id="{{ button.id }}"
+                   name="{{ button.name }}"
+                   target="{{ button.target }}"
+                   class="form-button-secondary {{ button.class }}">{{ __(button.title) }}</a>
+            {% endif %}
+            {% if button.type == 'link' %}
+                <a href="{{ button.href }}"
+                   id="{{ button.id }}"
+                   name="{{ button.name }}"
+                   target="{{ button.target }}"
+                   class="form-button-link {{ button.class }}">{{ __(button.title) }}</a>
+            {% endif %}
+        {% endfor %}
     {% endif %}
 </form>
