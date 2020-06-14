@@ -53,3 +53,12 @@
 {
     @apply border-black bg-dark text-white;
 }
+
+.form-button-secondary {
+    @apply rounded px-4 py-2 border border-solid border-dark text-black no-underline inline-block w-auto cursor-pointer;
+}
+
+.form-button-secondary:hover
+{
+    @apply border-black bg-dark text-white;
+}
