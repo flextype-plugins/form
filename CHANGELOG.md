@@ -1,3 +1,10 @@
+<a name="1.1.3"></a>
+# [1.1.3](https://github.com/flextype-plugins/form/compare/v1.1.2...v1.1.3) (2020-06-18)
+
+### Features
+
+* **core:** add ability to display flash messages on form submit
+
 <a name="1.1.2"></a>
 # [1.1.2](https://github.com/flextype-plugins/form/compare/v1.1.1...v1.1.2) (2020-06-14)
 
