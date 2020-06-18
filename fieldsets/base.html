@@ -30,4 +30,16 @@
     {% else %}
         {% include "plugins/form/fieldsets/single-form.html" %}
     {% endif %}
+
+    {% for message in flash()['success'] %}
+        <div class="form-message-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {% for message in flash()['error'] %}
+        <div class="form-message-error">
+            {{ message }}
+        </div>
+    {% endfor %}
 </div>
