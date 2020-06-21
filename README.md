@@ -73,6 +73,9 @@ form:
   name: default
   id: default
   method: post
+  message:
+    success: true
+    error: true
   buttons:
     submit:
       title: Submit

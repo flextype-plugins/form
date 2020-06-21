@@ -8,6 +8,6 @@
            {% if properties.validation.required %}required="required"{% endif %}
            {% if properties.validation.pattern %}pattern="{{ properties.validation.pattern }}"{% endif %}>
     {% if properties.help %}
-        <small>{{ properties.help }}</small>
+        <small>{{ tr(properties.help)}}</small>
     {% endif %}
 </div>

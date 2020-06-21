@@ -10,6 +10,6 @@
     </select>
     <input type="hidden" name="{{ field_name }}" value="{{ field_value|join(',') }}">
     {% if properties.help %}
-        <small>{{ properties.help }}</small>
+        <small>{{ tr(properties.help) }}</small>
     {% endif %}
 </div>
