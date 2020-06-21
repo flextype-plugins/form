@@ -1,3 +1,12 @@
+<a name="1.1.4"></a>
+# [1.1.4](https://github.com/flextype-plugins/form/compare/v1.1.3...v1.1.4) (2020-06-21)
+
+### Features
+
+* **fieldsets:** add ability show form messages on submit
+* **fieldsets:** add ability to translate field `help` property
+
+
 <a name="1.1.3"></a>
 # [1.1.3](https://github.com/flextype-plugins/form/compare/v1.1.2...v1.1.3) (2020-06-18)
 
