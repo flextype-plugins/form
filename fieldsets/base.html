@@ -31,15 +31,19 @@
         {% include "plugins/form/fieldsets/single-form.html" %}
     {% endif %}
 
-    {% for message in flash()['success'] %}
-        <div class="form-message-success">
-            {{ message }}
-        </div>
-    {% endfor %}
+    {% if not fieldset.form.messages.success %}
+        {% for message in flash()['success'] %}
+            <div class="form-message-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
 
-    {% for message in flash()['error'] %}
-        <div class="form-message-error">
-            {{ message }}
-        </div>
-    {% endfor %}
+    {% if not fieldset.form.messages.error %}
+        {% for message in flash()['error'] %}
+            <div class="form-message-error">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
 </div>
