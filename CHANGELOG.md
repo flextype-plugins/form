@@ -1,3 +1,10 @@
+<a name="1.1.5"></a>
+# [1.1.5](https://github.com/flextype-plugins/form/compare/v1.1.4...v1.1.5) (2020-06-23)
+
+### Bug Fixes
+
+* **fieldsets:** fix form messages on submit
+
 <a name="1.1.4"></a>
 # [1.1.4](https://github.com/flextype-plugins/form/compare/v1.1.3...v1.1.4) (2020-06-21)
 
