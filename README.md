@@ -73,7 +73,7 @@ form:
   name: default
   id: default
   method: post
-  message:
+  messages:
     success: true
     error: true
   buttons:

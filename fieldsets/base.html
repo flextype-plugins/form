@@ -31,7 +31,7 @@
         {% include "plugins/form/fieldsets/single-form.html" %}
     {% endif %}
 
-    {% if not fieldset.form.messages.success %}
+    {% if fieldset.form.messages.success %}
         {% for message in flash()['success'] %}
             <div class="form-message-success">
                 {{ message }}
@@ -39,7 +39,7 @@
         {% endfor %}
     {% endif %}
 
-    {% if not fieldset.form.messages.error %}
+    {% if fieldset.form.messages.error %}
         {% for message in flash()['error'] %}
             <div class="form-message-error">
                 {{ message }}
