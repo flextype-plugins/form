@@ -121,7 +121,7 @@ form:
 ```
 {% set registration_form = PATH_PROJECT ~ '/fieldsets/default.yaml' %}
 
-{{ form.render(serializer_decode(filesystem_read(registration_form), 'yaml'), {})|raw }}
+{{ form.render(yaml_decode(filesystem_read(registration_form)), {})|raw }}
 ```
 
 ## Processing form in the Backend
