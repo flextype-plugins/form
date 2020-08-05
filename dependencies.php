@@ -9,7 +9,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Flextype;
+namespace Flextype\Plugin\Form;
+
+use Flextype\Plugin\Form\Models\Form;
+use Flextype\Plugin\Form\Models\Fieldsets;
+use Flextype\Plugin\Form\Twig\FormTwigExtension;
 
 /**
  * Add Form Model to Flextype container

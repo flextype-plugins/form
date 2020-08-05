@@ -7,8 +7,9 @@ declare(strict_types=1);
  * Founded by Sergey Romanenko and maintained by Flextype Community.
  */
 
-namespace Flextype;
+namespace Flextype\Plugin\Form\Models;
 
+use Flextype\App\Foundation\Container;
 use Flextype\Component\Filesystem\Filesystem;
 use function count;
 use function rename;
@@ -53,7 +54,7 @@ class Fieldsets
 
         if (Filesystem::has($fieldset_file)) {
             if ($fieldset_body = Filesystem::read($fieldset_file)) {
-                if ($fieldset_decoded = $this->flextype['serializer']->decode($fieldset_body, 'yaml')) {
+                if ($fieldset_decoded = $this->flextype['yaml']->decode($fieldset_body)) {
                     return $fieldset_decoded;
                 }
 
@@ -88,7 +89,7 @@ class Fieldsets
                     continue;
                 }
 
-                $fieldset_content                 = $this->flextype['serializer']->decode(Filesystem::read($fieldset['path']), 'yaml');
+                $fieldset_content                 = $this->flextype['yaml']->decode(Filesystem::read($fieldset['path']));
                 $fieldsets[$fieldset['basename']] = $fieldset_content['title'];
             }
         }
@@ -131,7 +132,7 @@ class Fieldsets
         $fieldset_file = $this->getFileLocation($id);
 
         if (Filesystem::has($fieldset_file)) {
-            return Filesystem::write($fieldset_file, $this->flextype['serializer']->encode($data, 'yaml'));
+            return Filesystem::write($fieldset_file, $this->flextype['yaml']->encode($data));
         }
 
         return false;
@@ -152,7 +153,7 @@ class Fieldsets
         $fieldset_file = $this->getFileLocation($id);
 
         if (! Filesystem::has($fieldset_file)) {
-            return Filesystem::write($fieldset_file, $this->flextype['serializer']->encode($data, 'yaml'));
+            return Filesystem::write($fieldset_file, $this->flextype['yaml']->encode($data));
         }
 
         return false;

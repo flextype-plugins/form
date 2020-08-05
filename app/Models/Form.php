@@ -9,9 +9,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Flextype;
+namespace Flextype\Plugin\Form\Models;
 
-use Flextype\Component\Arr\Arr;
+use Flextype\App\Foundation\Container;
+use Flextype\Component\Arrays\Arrays;
 use function count;
 use function date;
 use function Flextype\Component\I18n\__;
@@ -56,9 +57,9 @@ class Form extends Container
      */
     public function getElementValue(string $element, array $values, array $properties)
     {
-        if (Arr::keyExists($values, $element)) {
-            $field_value = Arr::get($values, $element);
-        } elseif(Arr::keyExists($properties, 'default')) {
+        if (Arrays::has($values, $element)) {
+            $field_value = Arrays::get($values, $element);
+        } elseif(Arrays::has($properties, 'default')) {
             $field_value = $properties['default'];
         } else {
             $field_value = '';
