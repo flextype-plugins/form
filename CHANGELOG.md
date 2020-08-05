@@ -1,3 +1,10 @@
+<a name="1.2.1"></a>
+# [1.2.1](https://github.com/flextype-plugins/form/compare/v1.2.0...v1.2.1) (2020-08-05)
+
+### Bug Fixes
+
+* **core** fixes for new Twig 3
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/flextype-plugins/form/compare/v1.1.5...v1.2.0) (2020-08-05)
 
