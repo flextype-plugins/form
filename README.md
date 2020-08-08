@@ -46,7 +46,7 @@ Fieldsets are configuration files written in YAML for Admin Panel to create publ
 
 ### Fields Details
 
-#### Text
+#### <a name="field-text"></a> Text
 
 The plain text field for short text blocks or a short paragraph of information related to a item–basic text content that doesn't need special formatting. <br><br> **Common uses**: Short-form text that doesn't need any formatting; Product titles; Event names
 
@@ -72,7 +72,7 @@ form:
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
 | `validation.pattern` | string | | Validation pattern |
 
-#### Email
+#### <a name="field-email"></a> Email
 
 The email field for email text blocks.
 
@@ -81,8 +81,8 @@ The email field for email text blocks.
 ```yaml
 form:
   fields:
-    title:
-      title: Title
+    email:
+      title: Email
       type: email
 ```
 
@@ -97,6 +97,34 @@ form:
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
 | `validation.pattern` | string | | Validation pattern |
+
+#### <a name="field-number"></a> Number
+
+The number field for number blocks.
+
+##### Example
+
+```yaml
+form:
+  fields:
+    number:
+      title: Number
+      type: number
+```
+
+##### <a name="field-types"></a> Field Properties
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `title` | string | | The field label title |
+| `help` | string | | Optional help text below the field |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `default` | string | | Default value for the field, which will be used when entry is created |
+| `class` | string | | CSS class |
+| `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
+| `validation.pattern` | string | | Validation pattern |
+| min | int | | Minimum value for number field |
+| max | int | | Maximum value for number field |
 
 
 ### Basic Fieldset Example
