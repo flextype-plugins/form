@@ -206,6 +206,220 @@ form:
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
 | `validation.pattern` | string | | Validation pattern |
 
+#### <a name="field-hidden"></a> Hidden
+
+The hidden field allows storing values in the content file that are not visible to users. This can be useful to store additional information for a page, which is only available to the developer or editors who have access to the filesystem. Such a hidden field can be edited only either directly in the filesystem or programmatically via a script.
+
+##### Example
+
+```yaml
+form:
+  fields:
+    hidden:
+      title: Hidden
+      type: hidden
+```
+
+##### Field Properties
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `title` | string | | The field label title |
+| `help` | string | | Optional help text below the field |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `default` | string | | Default value for the field, which will be used when entry is created |
+| `class` | string | | CSS class |
+| `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
+| `validation.pattern` | string | | Validation pattern |
+
+#### <a name="field-heading"></a> Heading
+
+The heading field helps to group larger sets of fields.
+
+##### Example
+
+```yaml
+form:
+  fields:
+    heading:
+      title: Heading
+      type: heading
+```
+
+##### Field Properties
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `title` | string | | The field label title |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `class` | string | | CSS class |
+| `h` | int | 3 | Heading size from 1 to 6 |
+
+#### <a name="field-select"></a> Select
+
+The heading field helps to group larger sets of fields.
+
+##### Example
+
+```yaml
+form:
+  fields:
+    genre:
+      title: Genre
+      type: select
+      options:
+        action: Action
+        adventure: Adventure
+        horror: Horror
+```
+
+##### Field Properties
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `title` | string | | The field label title |
+| `help` | string | | Optional help text below the field |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `class` | string | | CSS class |
+| `options` | array | | Array of options |
+
+#### <a name="field-select-template"></a> Select Template
+
+Template select field for selecting entry template.
+
+##### Example
+
+```yaml
+form:
+  fields:
+    template:
+      title: Template
+      type: select_template
+```
+
+##### Field Properties
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `title` | string | | The field label title |
+| `help` | string | | Optional help text below the field |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `class` | string | | CSS class |
+
+#### <a name="field-select-visibility"></a> Select Visibility
+
+Visibility select field for selecting entry visibility state.
+
+##### Example
+
+```yaml
+form:
+  fields:
+    visibility:
+      title: Visibility
+      type: select_visibility
+```
+
+##### Field Properties
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `title` | string | | The field label title |
+| `help` | string | | Optional help text below the field |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `class` | string | | CSS class |
+
+#### <a name="field-select-routable"></a> Select Routable
+
+Routable select field for selection entry routable state.
+
+##### Example
+
+```yaml
+form:
+  fields:
+    routable:
+      title: Routable
+      type: select_routable
+```
+
+##### Field Properties
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `title` | string | | The field label title |
+| `help` | string | | Optional help text below the field |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `class` | string | | CSS class |
+
+#### <a name="field-select-media"></a> Select Media
+
+Media select field for selection media for entry.
+
+##### Example
+
+```yaml
+form:
+  fields:
+    cover:
+      title: Media
+      type: select_media
+```
+
+##### Field Properties
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `title` | string | | The field label title |
+| `help` | string | | Optional help text below the field |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `class` | string | | CSS class |
+
+#### <a name="field-tags"></a> Tags
+
+An interactive tags input field.
+
+##### Example
+
+```yaml
+form:
+  fields:
+    tags:
+      title: Tags
+      type: tags
+```
+
+##### Field Properties
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `title` | string | | The field label title |
+| `help` | string | | Optional help text below the field |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `class` | string | | CSS class |
+
+#### <a name="field-datetimepicker"></a> Date Time Picker
+
+The datetimepicker field lets you specify a date and time.
+
+##### Example
+
+```yaml
+form:
+  fields:
+    published_at:
+      title: Tags
+      type: datetimepicker
+```
+
+##### Field Properties
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `title` | string | | The field label title |
+| `help` | string | | Optional help text below the field |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `class` | string | | CSS class |
 
 ### Basic Fieldset Example
 
