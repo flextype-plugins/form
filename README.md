@@ -26,44 +26,62 @@ The following dependencies need to be installed for Form Plugin.
 
 Fieldsets are configuration files written in YAML for Admin Panel to create publish forms. They establish your content model. Essentially, a schema that defines your fields, data types, and the interface used to manage them.
 
-### <a name="field-types"></a> Field types
+### Fields
 
-Form fields are an essential part of the fieldsets and have very powerful options.
+#### Text
 
-| Field type | Description |
-| --- | --- |
-| `text` | The plain text field for short text blocks or a short paragraph of information related to a item–basic text content that doesn't need special formatting. <br><br> **Common uses**: Short-form text that doesn't need any formatting; Product titles; Event names |
-| `email` | The email field for email text blocks |
-| `number` | The number field for number blocks |
-| `password` | The password field for password text blocks |
-| `textarea` | While a plain text field is used for creating short-form, a textarea field is used for long-form content. <br><br> **Common uses**: Long-form text that doesn't need any formatting; Product descriptions; Event descriptions |
-| `html` | While a textarea field is used for creating long-form, unformatted text, a html field is used for long-form content that you can format. The html field gives your collaborators freedom to create and format your content. <br><br> **Common uses**: Most long-form content with links; Blog posts; Articles; Team member bios; Product description; Event details |
-| `hidden` | The hidden field is like the text field, except it's hidden from the content editor. |
-| `heading` | The heading field helps to group larger sets of fields. |
-| `select` | A simple selectbox field. |
-| `select_template` | Template select field for selecting entry template. |
-| `select_visibility` | Visibility select field for selecting entry visibility state. |
-| `select_routable` | Routable select field for selection entry routable state. |
-| `select_media` | Media select field for selection media for entry. |
-| `tags` | An interactive tags input field. |
-| `datetimepicker` | The datetimepicker field lets you specify a date and time. |
+The plain text field for short text blocks or a short paragraph of information related to a item–basic text content that doesn't need special formatting. <br><br> **Common uses**: Short-form text that doesn't need any formatting; Product titles; Event names
 
+##### Example
 
-### <a name="field-properties"></a> Field properties
+```yaml
+form:
+  fields:
+    title:
+      title: Title
+      type: text
+```
+
+##### <a name="field-types"></a> Field Properties
 
 | Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| title | string | | The field label title |
-| help | string | | Optional help text below the field |
-| size | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
-| default | string | | Default value for the field, which will be used when entry is created |
-| class | string | | CSS class |
-| min | int | | Minimum value for number field |
-| max | int | | Maximum value for number field |
-| validation.required | boolean | | Set is this field required or not. Set `true` or `false` |
-| validation.pattern | string | | Validation pattern |
+| --- | --- |
+| `title` | string | | The field label title |
+| `help` | string | | Optional help text below the field |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `default` | string | | Default value for the field, which will be used when entry is created |
+| `class` | string | | CSS class |
+| `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
+| `validation.pattern` | string | | Validation pattern |
 
-### Example
+#### Email
+
+The email field for email text blocks.
+
+##### Example
+
+```yaml
+form:
+  fields:
+    title:
+      title: Title
+      type: email
+```
+
+##### <a name="field-types"></a> Field Properties
+
+| Property | Type | Default | Description |
+| --- | --- |
+| `title` | string | | The field label title |
+| `help` | string | | Optional help text below the field |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `default` | string | | Default value for the field, which will be used when entry is created |
+| `class` | string | | CSS class |
+| `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
+| `validation.pattern` | string | | Validation pattern |
+
+
+### Basic Fieldset Example
 
 `project/fieldsets/default.yaml`
 
