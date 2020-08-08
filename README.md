@@ -41,8 +41,8 @@ Fieldsets are configuration files written in YAML for Admin Panel to create publ
 * [Select Visibility](#field-select-visibility)
 * [Select Routable](#field-select-routable)
 * [Select Media](#field-select-media)
-* [Tags](#field-select-tags)
-* [Date Time Picker](#field-select-datetimepicker)
+* [Tags](#field-tags)
+* [Date Time Picker](#field-datetimepicker)
 
 ### Fields Details
 
