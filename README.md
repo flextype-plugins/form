@@ -28,7 +28,25 @@ Fieldsets are configuration files written in YAML for Admin Panel to create publ
 
 ### Fields
 
-#### `Text`
+* [Text](#field-text)
+* [Email](#field-email)
+* [Number](#field-number)
+* [Password](#field-password)
+* [Textarea](#field-textarea)
+* [HTML](#field-html)
+* [Hidden](#field-hidden)
+* [Heading](#field-heading)
+* [Select](#field-select)
+* [Select Template](#field-select-template)
+* [Select Visibility](#field-select-visibility)
+* [Select Routable](#field-select-routable)
+* [Select Media](#field-select-media)
+* [Tags](#field-select-tags)
+* [Date Time Picker](#field-select-datetimepicker)
+
+### Fields Details
+
+#### Text
 
 The plain text field for short text blocks or a short paragraph of information related to a item–basic text content that doesn't need special formatting. <br><br> **Common uses**: Short-form text that doesn't need any formatting; Product titles; Event names
 
