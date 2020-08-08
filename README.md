@@ -127,7 +127,7 @@ form:
 {{ form.render(yaml_decode(filesystem_read(registration_form_file)), {})|raw }}
 ```
 
-## Processing form in the Backend
+### Processing form in the Backend
 
 ```
 use Psr\Http\Message\ResponseInterface as Response;
