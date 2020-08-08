@@ -7,7 +7,10 @@ author:
   email: support@flextype.org
   url: https://flextype.org
 homepage: https://github.com/flextype-plugins/form
+documentation: https://github.com/flextype-plugins/form
+changelog: https://github.com/flextype-plugins/form/blob/master/CHANGELOG.md
 bugs: https://github.com/flextype-plugins/form/issues
+keywords: form, fieldsets
 license: MIT
 
 dependencies:
