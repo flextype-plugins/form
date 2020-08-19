@@ -11,24 +11,32 @@ declare(strict_types=1);
 
 namespace Flextype\Plugin\Form\Models;
 
-use Flextype\App\Foundation\Container;
 use Flextype\Component\Arrays\Arrays;
-use function count;
-use function date;
-use function Flextype\Component\I18n\__;
 use function str_replace;
 use function strlen;
 use function strpos;
-use function strtotime;
 use function substr_replace;
 
-class Form extends Container
+class Form
 {
+    /**
+     * Flextype Application
+     */
+     protected $flextype;
+
+    /**
+     * __construct
+     */
+    public function __construct($flextype)
+    {
+        $this->flextype = $flextype;
+    }
+
     /**
      * Render form
      *
-     * @param array   $fieldset Fieldset
-     * @param array   $values   Fieldset values
+     * @param array $fieldset Fieldset
+     * @param array $values   Fieldset values
      *
      * @return string Returns form based on fieldset
      *
@@ -36,12 +44,14 @@ class Form extends Container
      */
     public function render(array $fieldset, array $values = []) : string
     {
-        return $this->twig->fetch('plugins/form/fieldsets/base.html',
-                                            [
-                                             'fieldset' => $fieldset,
-                                             'values' => $values,
-                                             'query' => $_GET
-                                            ]);
+        return $this->flextype->container('twig')->fetch(
+            'plugins/form/fieldsets/base.html',
+            [
+                'fieldset' => $fieldset,
+                'values' => $values,
+                'query' => $_GET,
+            ]
+        );
     }
 
     /**
@@ -59,7 +69,7 @@ class Form extends Container
     {
         if (Arrays::has($values, $element)) {
             $field_value = Arrays::get($values, $element);
-        } elseif(Arrays::has($properties, 'default')) {
+        } elseif (Arrays::has($properties, 'default')) {
             $field_value = $properties['default'];
         } else {
             $field_value = '';

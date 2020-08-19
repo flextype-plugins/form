@@ -15,9 +15,9 @@ use Twig\Extension\GlobalsInterface;
 class FormTwigExtension extends AbstractExtension implements GlobalsInterface
 {
     /**
-     * Flextype Dependency Container
+     * Flextype Application
      */
-    private $flextype;
+    protected $flextype;
 
     /**
      * Constructor
@@ -41,9 +41,9 @@ class FormTwigExtension extends AbstractExtension implements GlobalsInterface
 class FormTwig
 {
     /**
-     * Flextype Dependency Container
+     * Flextype Application
      */
-    private $flextype;
+    protected $flextype;
 
     /**
      * Constructor
@@ -53,35 +53,23 @@ class FormTwig
         $this->flextype = $flextype;
     }
 
-    /**
-     *
-     */
     public function render(array $fieldset, array $values = []) : string
     {
-        return $this->flextype['form']->render($fieldset, $values);
+        return $this->flextype->container('form')->render($fieldset, $values);
     }
 
-    /**
-     *
-     */
     public function getElementID(string $element) : string
     {
-        return $this->flextype['form']->getElementID($element);
+        return $this->flextype->container('form')->getElementID($element);
     }
 
-    /**
-     *
-     */
     public function getElementName(string $element) : string
     {
-        return $this->flextype['form']->getElementName($element);
+        return $this->flextype->container('form')->getElementName($element);
     }
 
-    /**
-     *
-     */
     public function getElementValue(string $element, array $values, array $properties)
     {
-        return $this->flextype['form']->getElementValue($element, $values, $properties);
+        return $this->flextype->container('form')->getElementValue($element, $values, $properties);
     }
 }
