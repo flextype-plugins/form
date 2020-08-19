@@ -9,7 +9,6 @@ declare(strict_types=1);
 
 namespace Flextype\Plugin\Form\Models;
 
-use Flextype\App\Foundation\Container;
 use Flextype\Component\Filesystem\Filesystem;
 use function count;
 use function rename;
@@ -17,9 +16,9 @@ use function rename;
 class Fieldsets
 {
     /**
-     * Flextype Dependency Container
+     * Flextype Application
      */
-    private $flextype;
+    protected $flextype;
 
     /**
      * Constructor
@@ -34,9 +33,11 @@ class Fieldsets
             Filesystem::createDir($this->getDirLocation());
         }
 
-        if (! Filesystem::has($this->getFileLocation('default'))) {
-            Filesystem::copy(PATH['project'] . '/plugins/form/fieldsets/samples/default/default.yaml', $this->getFileLocation('default'));
+        if (Filesystem::has($this->getFileLocation('default'))) {
+            return;
         }
+
+        Filesystem::copy(PATH['project'] . '/plugins/form/fieldsets/samples/default/default.yaml', $this->getFileLocation('default'));
     }
 
     /**
@@ -54,7 +55,7 @@ class Fieldsets
 
         if (Filesystem::has($fieldset_file)) {
             if ($fieldset_body = Filesystem::read($fieldset_file)) {
-                if ($fieldset_decoded = $this->flextype['yaml']->decode($fieldset_body)) {
+                if ($fieldset_decoded = $this->flextype->container('yaml')->decode($fieldset_body)) {
                     return $fieldset_decoded;
                 }
 
@@ -89,7 +90,7 @@ class Fieldsets
                     continue;
                 }
 
-                $fieldset_content                 = $this->flextype['yaml']->decode(Filesystem::read($fieldset['path']));
+                $fieldset_content                 = $this->flextype->container('yaml')->decode(Filesystem::read($fieldset['path']));
                 $fieldsets[$fieldset['basename']] = $fieldset_content['title'];
             }
         }
@@ -110,11 +111,11 @@ class Fieldsets
      */
     public function rename(string $id, string $new_id) : bool
     {
-        if (!Filesystem::has($this->getFileLocation($new_id))) {
+        if (! Filesystem::has($this->getFileLocation($new_id))) {
             return rename($this->getFileLocation($id), $this->getFileLocation($new_id));
-        } else {
-            return false;
         }
+
+        return false;
     }
 
     /**
@@ -132,7 +133,7 @@ class Fieldsets
         $fieldset_file = $this->getFileLocation($id);
 
         if (Filesystem::has($fieldset_file)) {
-            return Filesystem::write($fieldset_file, $this->flextype['yaml']->encode($data));
+            return Filesystem::write($fieldset_file, $this->flextype->container('yaml')->encode($data));
         }
 
         return false;
@@ -153,7 +154,7 @@ class Fieldsets
         $fieldset_file = $this->getFileLocation($id);
 
         if (! Filesystem::has($fieldset_file)) {
-            return Filesystem::write($fieldset_file, $this->flextype['yaml']->encode($data));
+            return Filesystem::write($fieldset_file, $this->flextype->container('yaml')->encode($data));
         }
 
         return false;
