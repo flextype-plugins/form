@@ -20,16 +20,11 @@ use function substr_replace;
 class Form
 {
     /**
-     * Flextype Application
-     */
-     protected $flextype;
-
-    /**
      * __construct
      */
-    public function __construct($flextype)
+    public function __construct()
     {
-        $this->flextype = $flextype;
+
     }
 
     /**
@@ -44,7 +39,7 @@ class Form
      */
     public function render(array $fieldset, array $values = []) : string
     {
-        return $this->flextype->container('twig')->fetch(
+        return flextype('twig')->fetch(
             'plugins/form/fieldsets/base.html',
             [
                 'fieldset' => $fieldset,

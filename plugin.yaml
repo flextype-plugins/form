@@ -1,5 +1,5 @@
 name: Form
-version: 1.4.0
+version: 1.5.0
 description: Form Plugin to render user forms for Flextype.
 icon: fas fa-check-circle
 author:
@@ -14,6 +14,6 @@ keywords: form, fieldsets
 license: MIT
 
 dependencies:
-  flextype: 0.9.10
+  flextype: 0.9.11
   twig: '>=1.0.0'
   jquery: '>=1.0.0'

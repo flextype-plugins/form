@@ -21,30 +21,30 @@ use function substr;
 /**
  * Add Form Model to Flextype container
  */
-$flextype->container()['form'] = static function () use ($flextype) {
-    return new Form($flextype);
+flextype()->container()['form'] = static function () {
+    return new Form();
 };
 
 /**
  * Add Fieldsets Model to Flextype container
  */
-$flextype->container()['fieldsets'] = static function () use ($flextype) {
-    return new Fieldsets($flextype);
+flextype()->container()['fieldsets'] = static function () {
+    return new Fieldsets();
 };
 
 /**
  * Add Form Twig extension
  */
-$flextype->container('twig')->addExtension(new FormTwigExtension($flextype));
+flextype('twig')->addExtension(new FormTwigExtension());
 
 /**
  * Add Assets
  */
-$_admin_css = $flextype->container('registry')->has('assets.admin.css') ? $flextype->container('registry')->get('assets.admin.css') : [];
-$_site_css  = $flextype->container('registry')->has('assets.site.css') ? $flextype->container('registry')->get('assets.site.css') : [];
+$_admin_css = flextype('registry')->has('assets.admin.css') ? flextype('registry')->get('assets.admin.css') : [];
+$_site_css  = flextype('registry')->has('assets.site.css') ? flextype('registry')->get('assets.site.css') : [];
 
-if ($flextype->container('registry')->get('plugins.form.settings.load_on_admin')) {
-    $flextype->container('registry')->set(
+if (flextype('registry')->get('plugins.form.settings.load_on_admin')) {
+    flextype('registry')->set(
         'assets.admin.css',
         array_merge($_admin_css, [
             'project/plugins/form/assets/dist/css/form-vendor-build.min.css',
@@ -53,8 +53,8 @@ if ($flextype->container('registry')->get('plugins.form.settings.load_on_admin')
     );
 }
 
-if ($flextype->container('registry')->get('plugins.form.settings.load_on_site')) {
-    $flextype->container('registry')->set(
+if (flextype('registry')->get('plugins.form.settings.load_on_site')) {
+    flextype('registry')->set(
         'assets.site.css',
         array_merge($_site_css, [
             'project/plugins/form/assets/dist/css/form-vendor-build.min.css',
@@ -63,10 +63,10 @@ if ($flextype->container('registry')->get('plugins.form.settings.load_on_site'))
     );
 }
 
-if ($flextype->container('registry')->get('flextype.settings.locale') === 'en_US') {
+if (flextype('registry')->get('flextype.settings.locale') === 'en_US') {
     $_locale = 'en';
 } else {
-    $_locale = substr(strtolower($flextype->container('registry')->get('flextype.settings.locale')), 0, 2);
+    $_locale = substr(strtolower(flextype('registry')->get('flextype.settings.locale')), 0, 2);
 }
 
 if ($_locale !== 'en') {
@@ -77,11 +77,11 @@ if ($_locale !== 'en') {
     $flatpickr_locale_js = '';
 }
 
-$_admin_js = $flextype->container('registry')->has('assets.admin.js') ? $flextype->container('registry')->get('assets.admin.js') : [];
-$_site_js  = $flextype->container('registry')->has('assets.site.js') ? $flextype->container('registry')->get('assets.site.js') : [];
+$_admin_js = flextype('registry')->has('assets.admin.js') ? flextype('registry')->get('assets.admin.js') : [];
+$_site_js  = flextype('registry')->has('assets.site.js') ? flextype('registry')->get('assets.site.js') : [];
 
-if ($flextype->container('registry')->get('plugins.form.settings.load_on_admin')) {
-    $flextype->container('registry')->set(
+if (flextype('registry')->get('plugins.form.settings.load_on_admin')) {
+    flextype('registry')->set(
         'assets.admin.js',
         array_merge($_admin_js, [
             'project/plugins/form/assets/dist/js/form-vendor-build.min.js',
@@ -92,8 +92,8 @@ if ($flextype->container('registry')->get('plugins.form.settings.load_on_admin')
     );
 }
 
-if ($flextype->container('registry')->get('plugins.form.settings.load_on_site')) {
-    $flextype->container('registry')->set(
+if (flextype('registry')->get('plugins.form.settings.load_on_site')) {
+    flextype('registry')->set(
         'assets.site.js',
         array_merge($_site_js, [
             'project/plugins/form/assets/dist/js/form-vendor-build.min.js',
