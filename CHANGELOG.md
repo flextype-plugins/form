@@ -1,3 +1,10 @@
+<a name="1.5.1"></a>
+# [1.5.1](https://github.com/flextype-plugins/form/compare/v1.5.0...v1.5.1) (2020-08-26)
+
+### Bug Fixes
+
+* **fields** fix select_media field
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/flextype-plugins/form/compare/v1.4.0...v1.5.0) (2020-08-25)
 
