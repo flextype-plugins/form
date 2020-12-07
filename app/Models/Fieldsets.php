@@ -36,7 +36,7 @@ class Fieldsets
     }
 
     /**
-     * Fetch fieldset
+     * Fetch single fieldset
      *
      * @param string $id Fieldset id
      *
@@ -44,7 +44,7 @@ class Fieldsets
      *
      * @access public
      */
-    public function fetch(string $id)
+    public function fetchSingle(string $id)
     {
         $fieldset_file = $this->getFileLocation($id);
 
@@ -70,7 +70,7 @@ class Fieldsets
      *
      * @access public
      */
-    public function fetchAll() : array
+    public function fetchCollection() : array
     {
         // Init Fieldsets array
         $fieldsets = [];
