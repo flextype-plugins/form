@@ -1,4 +1,4 @@
-{% set media_files = filesystem_list_contents(PATH_PROJECT ~ '/uploads/entries/' ~ query.id ~ '/') %}
+{% set media_files = filesystem_list_contents(PATH_PROJECT ~ '/media/entries/' ~ query.id ~ '/') %}
 <div class="form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
     <label for="{{ field_id }}" class="form-control-title">{{ tr(properties.title) }}</label>
     <select class="form-control {{ properties.class }} js-select-media" name="{{ field_name }}">
