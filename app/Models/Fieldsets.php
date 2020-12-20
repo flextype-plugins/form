@@ -50,7 +50,7 @@ class Fieldsets
 
         if (Filesystem::has($fieldset_file)) {
             if ($fieldset_body = Filesystem::read($fieldset_file)) {
-                if ($fieldset_decoded = flextype('yaml')->decode($fieldset_body)) {
+                if ($fieldset_decoded = flextype('serializers')->yaml()->decode($fieldset_body)) {
                     return $fieldset_decoded;
                 }
 
@@ -85,7 +85,7 @@ class Fieldsets
                     continue;
                 }
 
-                $fieldset_content                 = flextype('yaml')->decode(Filesystem::read($fieldset['path']));
+                $fieldset_content                 = flextype('serializers')->yaml()->decode(Filesystem::read($fieldset['path']));
                 $fieldsets[$fieldset['basename']] = $fieldset_content['title'];
             }
         }
@@ -128,7 +128,7 @@ class Fieldsets
         $fieldset_file = $this->getFileLocation($id);
 
         if (Filesystem::has($fieldset_file)) {
-            return Filesystem::write($fieldset_file, flextype('yaml')->encode($data));
+            return Filesystem::write($fieldset_file, flextype('serializers')->yaml()->encode($data));
         }
 
         return false;
@@ -149,7 +149,7 @@ class Fieldsets
         $fieldset_file = $this->getFileLocation($id);
 
         if (! Filesystem::has($fieldset_file)) {
-            return Filesystem::write($fieldset_file, flextype('yaml')->encode($data));
+            return Filesystem::write($fieldset_file, flextype('serializers')->yaml()->encode($data));
         }
 
         return false;
