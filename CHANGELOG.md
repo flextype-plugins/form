@@ -1,3 +1,10 @@
+<a name="1.8.1"></a>
+# [1.8.1](https://github.com/flextype-plugins/form/compare/v1.8.0...v1.8.1) (2020-12-30)
+
+### Bug Fixes
+
+* **composer** fix dependencies
+
 <a name="1.8.0"></a>
 # [1.8.0](https://github.com/flextype-plugins/form/compare/v1.7.0...v1.8.0) (2020-12-30)
 
