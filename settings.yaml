@@ -2,8 +2,8 @@
 enabled: true
 
 # Form plugin priority
-priority: 2
+priority: 45
 
 # place to load
-load_on_site: true		
+load_on_site: true
 load_on_admin: true
