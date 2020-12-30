@@ -32,7 +32,7 @@
     {% endif %}
 
     {% if fieldset.form.messages.success %}
-        {% for message in flash()['success'] %}
+        {% for message in flextype.flash.getMessages()['success'] %}
             <div class="form-message-success">
                 {{ message }}
             </div>
@@ -40,7 +40,7 @@
     {% endif %}
 
     {% if fieldset.form.messages.error %}
-        {% for message in flash()['error'] %}
+        {% for message in flextype.flash.getMessages()['error'] %}
             <div class="form-message-error">
                 {{ message }}
             </div>

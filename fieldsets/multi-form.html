@@ -9,9 +9,9 @@
             <div class="form-row">
                 {% for element, properties in fieldset['form']['tabs'][key]['fields']  %}
 
-                    {% set field_name = form.getElementName(element) %}
-                    {% set field_id = form.getElementID(element) %}
-                    {% set field_value = form.getElementValue(element, values, properties) %}
+                    {% set field_name = flextype.form.getElementName(element) %}
+                    {% set field_id = flextype.form.getElementID(element) %}
+                    {% set field_value = flextype.form.getElementValue(element, values, properties) %}
 
                     {% include "plugins/form/fieldsets/fields/fields.html" %}
 

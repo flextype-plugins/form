@@ -1,16 +1,16 @@
 <div class="form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
     <label for="{{ field_id }}" class="form-control-title">{{ tr(properties.title) }}</label>
-    <input type="text" id="{{ field_id }}" name="{{ field_id }}" value="{{ field_value|date(registry.get('flextype.settings.date_display_format')) }}" class="form-control js-datetimepicker {{ properties.class }}">
+    <input type="text" id="{{ field_id }}" name="{{ field_id }}" value="{{ field_value|date(flextype.registry.get('flextype.settings.date_display_format')) }}" class="form-control js-datetimepicker {{ properties.class }}">
     {% if properties.help %}
         <small>{{ tr(properties.help)}}</small>
     {% endif %}
 </div>
 
-{% if registry.get('flextype.settings.locale') == 'en_US' %}
+{% if flextype.registry.get('flextype.settings.locale') == 'en_US' %}
     {% set flatpickr_locale = 'en' %}
 {% else %}
-    {% set flatpickr_locale = registry.get('flextype.settings.locale')|lower|slice(0, 2) %}
+    {% set flatpickr_locale = flextype.registry.get('flextype.settings.locale')|lower|slice(0, 2) %}
 {% endif %}
 
-<input type="hidden" name="flatpickr-date-format" value="{{ registry.get('flextype.settings.date_format') }}">
+<input type="hidden" name="flatpickr-date-format" value="{{ flextype.registry.get('flextype.settings.date_format') }}">
 <input type="hidden" name="flatpickr-locale" value="{{ flatpickr_locale }}">
