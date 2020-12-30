@@ -20,14 +20,6 @@ use function substr_replace;
 class Form
 {
     /**
-     * __construct
-     */
-    public function __construct()
-    {
-
-    }
-
-    /**
      * Render form
      *
      * @param array $fieldset Fieldset
