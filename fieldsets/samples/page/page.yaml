@@ -1,6 +1,8 @@
 title: Page
 default_field: title
-icon: 'far fa-file-alt'
+icon:
+  name: file-alt
+  set: regular
 size: 12
 form:
   tabs:
