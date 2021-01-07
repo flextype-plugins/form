@@ -1,3 +1,10 @@
+<a name="1.10.1"></a>
+# [1.10.1](https://github.com/flextype-plugins/form/compare/v1.10.0...v1.10.1) (2021-01-07)
+
+### Bug Fixes
+
+* **samples** fix samples.
+
 <a name="1.10.0"></a>
 # [1.10.0](https://github.com/flextype-plugins/form/compare/v1.9.0...v1.10.0) (2021-01-07)
 
