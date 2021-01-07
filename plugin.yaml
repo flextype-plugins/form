@@ -1,7 +1,9 @@
 name: Form
-version: 1.9.0
+version: 1.10.0
 description: Form Plugin to render user forms for Flextype.
-icon: fas fa-check-circle
+icon:
+  name: check-circle
+  set: "fontawesome|solid"
 author:
   name: Sergey Romanenko
   email: support@flextype.org
@@ -15,5 +17,5 @@ license: MIT
 
 dependencies:
   flextype: 0.9.15
-  twig: '>=1.0.0'
+  twig: '>=2.0.0'
   jquery: '>=1.0.0'

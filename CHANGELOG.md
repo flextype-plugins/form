@@ -1,3 +1,11 @@
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/flextype-plugins/form/compare/v1.9.0...v1.10.0) (2021-01-07)
+
+### Features
+
+* **core** update code base for new Icon 2.0.0
+* **core** update code base for new Twig 2.0.0
+
 <a name="1.9.0"></a>
 # [1.9.0](https://github.com/flextype-plugins/form/compare/v1.8.1...v1.9.0) (2021-01-03)
 
@@ -5,7 +13,6 @@
 
 * **core** update code base for new Flextype 0.9.15
 * **core** add plugin.php file
-
 
 <a name="1.8.1"></a>
 # [1.8.1](https://github.com/flextype-plugins/form/compare/v1.8.0...v1.8.1) (2020-12-30)
