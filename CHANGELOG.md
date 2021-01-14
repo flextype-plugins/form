@@ -1,3 +1,15 @@
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/flextype-plugins/form/compare/v1.10.1...v1.11.0) (2021-01-14)
+
+### Features
+
+* **core** update code base for new Flextype 0.9.16
+
+### Bug Fixes
+
+* **fields** fix select_media field
+* **fields** fix select_template field
+
 <a name="1.10.1"></a>
 # [1.10.1](https://github.com/flextype-plugins/form/compare/v1.10.0...v1.10.1) (2021-01-07)
 
