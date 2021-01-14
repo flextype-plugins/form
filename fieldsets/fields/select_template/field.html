@@ -1,10 +1,10 @@
-{% set templates = filesystem().find().in(PATH_PROJECT ~ '/themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/').files() %}
+{% set templates = filesystem().find().depth(0).in(PATH_PROJECT ~ '/themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/').files() %}
 <div class="form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
     <label for="{{ field_id }}" class="form-control-title">{{ tr(properties.title) }}</label>
     <select class="form-control {{ properties.class }} js-select-template" name="{{ field_name }}">
         {% for template in templates %}
-            {% if template.extension == 'html'%}
-                <option value="{{ template.basename }}" {% if template.basename == field_value %} selected="selected" {% endif %}>{{ template.basename }}</option>
+            {% if template.getExtension() == 'html'%}
+                <option value="{{ template.getBasename('.html') }}" {% if template.getBasename('.html') == field_value %} selected="selected" {% endif %}>{{ template.getBasename('.html') }}</option>
             {% endif %}
         {% endfor %}
     </select>
