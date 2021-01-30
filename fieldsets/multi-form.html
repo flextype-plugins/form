@@ -5,8 +5,8 @@
     {{ csrf() }}
     <input type="hidden" id="form-save-action" name="form-save-action" value="form-save-action">
     {% for key, tab in fieldset.form.tabs %}
-        <div class="form-tabs__content {% if key == 'main' %} form-tabs__content--active {% endif %}">
-            <div class="form-row">
+        <div class="plugin-form-tabs__content {% if key == 'main' %} plugin-form-tabs__content--active {% endif %}">
+            <div class="plugin-form-row">
                 {% for element, properties in fieldset['form']['tabs'][key]['fields']  %}
 
                     {% set field_name = flextype.form.getElementName(element) %}
@@ -22,21 +22,21 @@
     {% if fieldset.form.buttons %}
         {% for key, button in fieldset.form.buttons %}
             {% if button.type == 'submit' %}
-                <input type="submit" value="{{ __(button.title) }}" class="form-button {{ button.class }}">
+                <input type="submit" value="{{ __(button.title) }}" class="plugin-form-button plugin-form-button-primary {{ button.class }}">
             {% endif %}
             {% if button.type == 'button' %}
                 <a href="{{ button.href }}"
                    id="{{ button.id }}"
                    name="{{ button.name }}"
                    target="{{ button.target }}"
-                   class="form-button-secondary {{ button.class }}">{{ __(button.title) }}</a>
+                   class="plugin-form-button plugin-form-button-secondary {{ button.class }}">{{ __(button.title) }}</a>
             {% endif %}
             {% if button.type == 'link' %}
                 <a href="{{ button.href }}"
                    id="{{ button.id }}"
                    name="{{ button.name }}"
                    target="{{ button.target }}"
-                   class="form-button-link {{ button.class }}">{{ __(button.title) }}</a>
+                   class="plugin-form-button plugin-form-button-link {{ button.class }}">{{ __(button.title) }}</a>
             {% endif %}
         {% endfor %}
     {% endif %}

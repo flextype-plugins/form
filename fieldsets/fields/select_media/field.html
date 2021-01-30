@@ -1,7 +1,7 @@
 {% set media_files = filesystem().find().depth(0).in(PATH_PROJECT ~ '/media/entries/' ~ query.id ~ '/').files() %}
-<div class="form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
-    <label for="{{ field_id }}" class="form-control-title">{{ tr(properties.title) }}</label>
-    <select class="form-control {{ properties.class }} js-select-media" name="{{ field_name }}">
+<div class="plugin-form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
+    <label for="{{ field_id }}" class="plugin-form-label">{{ tr(properties.title) }}</label>
+    <select class="plugin-form-control {{ properties.class }} js-select-media" name="{{ field_name }}">
         {% for media_file in media_files %}
             {% if media_file.getExtension() in flextype.registry.get('plugins.admin.settings.entries.media.accept_file_types') %}
                 <option value="{{ media_file.getFilename() }}" {% if media_file.getFilename() == field_value %} selected="selected" {% endif %}>{{ query.id ~ '/' ~ media_file.getFilename() }}</option>

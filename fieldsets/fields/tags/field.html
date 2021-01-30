@@ -1,7 +1,7 @@
 {% set field_value = field_value|split(',') %}
-<div class="form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
-    <label for="{{ field_id }}" class="form-control-title">{{ tr(properties.title) }}</label>
-    <select class="form-control js-select-tags {{ properties.class }}" data-name="{{ field_name }}" multiple="multiple">
+<div class="plugin-form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
+    <label for="{{ field_id }}" class="plugin-form-label">{{ tr(properties.title) }}</label>
+    <select class="plugin-form-control js-select-tags {{ properties.class }}" data-name="{{ field_name }}" multiple="multiple">
         {% for key, value in field_value %}
             {% if value is not empty %}
                 <option value="{{ value|trim }}" selected="selected">{{ value|trim }}</option>

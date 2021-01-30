@@ -1,30 +1,30 @@
 {% set sizes =
     {
-        '1/12': 'form-col form-w-1/12',
-         '2/12': 'form-col form-w-2/12',
-         '3/12': 'form-col form-w-3/12',
-         '4/12': 'form-col form-w-4/12',
-         '5/12': 'form-col form-w-5/12',
-         '6/12': 'form-col form-w-6/12',
-         '7/12': 'form-col form-w-7/12',
-         '8/12': 'form-col form-w-8/12',
-         '9/12': 'form-col form-w-9/12',
-         '10/12': 'form-col form-w-10/12',
-         '12/12': 'form-col form-w-full',
-         '12': 'form-col form-w-full'
+        '1/12': 'plugin-form-col plugin-form-w-1/12',
+        '2/12': 'plugin-form-col plugin-form-w-2/12',
+        '3/12': 'plugin-form-col plugin-form-w-3/12',
+        '4/12': 'plugin-form-col plugin-form-w-4/12',
+        '5/12': 'plugin-form-col plugin-form-w-5/12',
+        '6/12': 'plugin-form-col plugin-form-w-6/12',
+        '7/12': 'plugin-form-col plugin-form-w-7/12',
+        '8/12': 'plugin-form-col plugin-form-w-8/12',
+        '9/12': 'plugin-form-col plugin-form-w-9/12',
+        '10/12': 'plugin-form-col plugin-form-w-10/12',
+        '12/12': 'plugin-form-col plugin-form-w-full',
+        '12': 'plugin-form-col plugin-form-w-full'
      }
 %}
 
-<div class="form-wrapper {% if fieldset.size %}{{ sizes[fieldset.size] }}{% else %}{{ sizes[12] }}{% endif %}">
+<div class="plugin-form-wrapper {% if fieldset.size %}{{ sizes[fieldset.size] }}{% else %}{{ sizes[12] }}{% endif %}">
     {% if fieldset.form.tabs %}
-        <nav class="form-tabs__nav">
-            <div class="form-tabs__nav__links">
+        <nav class="plugin-form-tabs__nav">
+            <div class="plugin-form-tabs__nav__links">
                 {% for key, section in fieldset.form.tabs %}
-                    <a href="javascript:;" class="form-tabs__nav__link {% if key == 'main' %} form-tabs__nav__link--active {% endif %}">{{ tr(section.title) }}</a>
+                    <a href="javascript:;" class="plugin-form-tabs__nav__link {% if key == 'main' %} plugin-form-tabs__nav__link--active {% endif %}">{{ tr(section.title) }}</a>
                 {% endfor %}
             </div>
         </nav>
-        <div class="form-tabs">
+        <div class="plugin-form-tabs">
             {% include "plugins/form/fieldsets/multi-form.html" %}
         </div>
     {% else %}
@@ -33,7 +33,7 @@
 
     {% if fieldset.form.messages.success %}
         {% for message in flextype.flash.getMessages()['success'] %}
-            <div class="form-message-success">
+            <div class="plugin-form-message-success">
                 {{ message }}
             </div>
         {% endfor %}
@@ -41,7 +41,7 @@
 
     {% if fieldset.form.messages.error %}
         {% for message in flextype.flash.getMessages()['error'] %}
-            <div class="form-message-error">
+            <div class="plugin-form-message-error">
                 {{ message }}
             </div>
         {% endfor %}
