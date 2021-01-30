@@ -25,7 +25,7 @@
     background-clip: padding-box;
     border: 1px solid #ced4da;
     appearance: none;
-    border-radius: .25rem;
+    border-radius: 6px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 

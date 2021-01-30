@@ -2,20 +2,20 @@
 {
   background-color: #ffffff;
   border-bottom-width: 0;
-  border-radius: 0.25rem;
+  border-radius: 6px;
 }
 
 .trumbowyg-button-pane::after
 {
-  background-color: #a0a0a0;
+  background-color: rgba(27, 31, 35, 0.15);;
 }
 
 .trumbowyg-box,
 .trumbowyg-editor
 {
-  border-color: #a0a0a0;
+  border-color: rgba(27, 31, 35, 0.15);;
   margin: 0;
-  border-radius: 0.25rem;
+  border-radius: 6px;
 }
 
 .trumbowyg-button-pane .trumbowyg-open-dropdown::after,
