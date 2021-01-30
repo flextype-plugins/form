@@ -1,5 +1,4 @@
 const gulp           = require('gulp');
-const tailwindConfig = "tailwind.config.js";
 
 /**
  * Task: gulp vendor-css
@@ -42,11 +41,10 @@ const tailwindConfig = "tailwind.config.js";
     const atimport     = require("postcss-import");
     const postcss      = require("gulp-postcss");
     const autoprefixer = require('gulp-autoprefixer');
-    const tailwindcss  = require("tailwindcss");
 
     return gulp
     .src(['assets/src/form.css'])
-    .pipe(postcss([atimport(), tailwindcss(tailwindConfig)]))
+    .pipe(postcss([atimport()]))
     .pipe(autoprefixer({
         overrideBrowserslist: [
             "last 1 version"
