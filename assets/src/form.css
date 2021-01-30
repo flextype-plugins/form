@@ -1,16 +1,9 @@
-/**
- * ADMIN PANEL
- */
-
-/* Base */
 @import 'base/variables';
 @import 'base/common';
 @import 'base/content';
+@import 'base/grid';
 
-/* Vendor modules */
 @import 'tabs/tabs';
 @import 'select/select';
 @import 'trumbowyg/trumbowyg';
 @import 'flatpickr/flatpickr';
-
-@import 'base/grid';

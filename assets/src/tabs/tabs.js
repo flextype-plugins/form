@@ -1,4 +1,4 @@
-$(".form-tabs__nav").on("click", ".form-tabs__nav__link:not(.form-tabs__nav__link--active)", function () {
-    $(this).addClass("form-tabs__nav__link--active").siblings().removeClass("form-tabs__nav__link--active");
-    $("div.form-tabs__content").removeClass("form-tabs__content--active").eq($(this).index()).addClass("form-tabs__content--active");
+$(".plugin-form-tabs__nav").on("click", ".plugin-form-tabs__nav__link:not(.plugin-form-tabs__nav__link--active)", function () {
+    $(this).addClass("plugin-form-tabs__nav__link--active").siblings().removeClass("plugin-form-tabs__nav__link--active");
+    $("div.plugin-form-tabs__content").removeClass("plugin-form-tabs__content--active").eq($(this).index()).addClass("plugin-form-tabs__content--active");
 });

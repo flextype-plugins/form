@@ -1,71 +1,83 @@
-.form-tabs__nav
+.plugin-form-tabs__nav
 {
     width: 100%;
+    margin-bottom: 20px;
 }
 
-.form-tabs__nav > div
+.plugin-form-tabs__nav > div
 {
-  border-radius: 0.25rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #16171a;
-  color: #ffffff;
-  background-color: #16171a;
-  cursor: pointer;
-  margin-bottom: 1.5rem;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 6px;
+    appearance: none;
+
+    background-color: rgb(250, 251, 252);
+    border-radius: 6px;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+    color: rgb(36, 41, 46);
+    padding: 0;
 }
 
-.form-tabs__nav > div a:first-of-type
+.plugin-form-tabs__nav > div a:first-of-type
 {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
-.form-tabs__nav > div a:last-of-type
+.plugin-form-tabs__nav > div a:last-of-type
 {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
-.form-tabs__content
+.plugin-form-tabs__content
 {
   width: 100%;
   display: none;
   border-radius: 0.25rem;
 }
 
-.form-tabs__content--active
+.plugin-form-tabs__content--active
 {
   display: block;
 }
 
-.form-tabs__nav__links
+.plugin-form-tabs__nav__links
 {
+    padding: 5px 16px;
     display: flex;
-    background-color: #16171a;
-    color: #ffffff;
+    background-color: #fff;
+    color: rgb(36, 41, 46);
 }
 
-.form-tabs__nav__link
+.plugin-form-tabs__nav__link
 {
   flex-basis: 0;
   flex-grow: 1;
   display: block;
-  color: #ffffff;
+  color: rgb(36, 41, 46);
   text-align: center;
   opacity: .8;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-.form-tabs__nav__link:hover,
-.form-tabs__nav__link--active
+.plugin-form-tabs__nav__link:hover,
+.plugin-form-tabs__nav__link--active
 {
-  background-color: #292b30;
-  opacity: 1;
+    color: rgb(36, 41, 46);
+    background-color: rgb(237, 239, 242);
+    opacity: 1;
 }
 
-.form-tabs
+.plugin-form-tabs
 {
     display: block;
 }

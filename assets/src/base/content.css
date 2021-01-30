@@ -1,31 +1,48 @@
-.form-wrapper,
-.form-wrapper.form-col {
+.plugin-form-wrapper,
+.plugin-form-wrapper.plugin-form-col {
     padding: 0;
     margin: 0;
 }
 
-.form-control-title
+.plugin-form-label
 {
-    @apply font-bold block mb-1 text-dark;
+    margin-bottom: .5rem;
+    font-weight: 400;
+    display: inline-block;
 }
 
-.form-control
+.plugin-form-control
 {
-    @apply w-full block border rounded border-gray-600 outline-none px-2 py-2;
+    border: 1px solid #e1e4e8;
+    display: block;
+    width: 100%;
+    padding: .44rem .5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.form-control:active,
-.form-control:focus
+.plugin-form-control:active,
+.plugin-form-control:focus
 {
-    @apply border-dark;
+    outline: 0;
+    border-color: #aaa;
+    box-shadow: none;
 }
 
-.form-group
+.plugin-form-group
 {
-    @apply mb-4;
+    margin-bottom: 1rem;
 }
 
-.form-row
+.plugin-form-row
 {
     display: flex;
     flex-wrap: wrap;
@@ -34,7 +51,7 @@
     margin-left: -10px;
 }
 
-.form-col
+.plugin-form-col
 {
     position: relative;
 
@@ -43,22 +60,22 @@
     padding-left: 10px;
 }
 
-.form-button
+.plugin-form-button
 {
-    @apply rounded px-4 py-2 border border-solid border-dark text-white inline-block w-auto bg-dark cursor-pointer;
+
 }
 
-.form-button:hover,
-.form-button--white:hover
+.plugin-form-button:hover,
+.plugin-form-button--white:hover
 {
-    @apply border-black bg-dark text-white;
+
 }
 
-.form-button-secondary {
-    @apply rounded px-4 py-2 border border-solid border-dark text-black no-underline inline-block w-auto cursor-pointer;
+.plugin-form-button-secondary {
+
 }
 
-.form-button-secondary:hover
+.plugin-form-button-secondary:hover
 {
-    @apply border-black bg-dark text-white;
+
 }

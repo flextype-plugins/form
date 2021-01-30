@@ -4,13 +4,13 @@ button:active {
     outline: none;
 }
 
-.form-heading {
+.plugin-form-heading {
      font-size: 1.875rem;
      border-bottom-width: 1px;
      border-color: #000000;
 }
 
-.form-message-success {
+.plugin-form-message-success {
     border-radius: 0.25rem;
     border-width: 1px;
     border-style: solid;
@@ -22,7 +22,7 @@ button:active {
     padding: 10px 20px;
 }
 
-.form-message-error {
+.plugin-form-message-error {
     padding: 10px 20px;
     border-radius: 0.25rem;
     border-width: 1px;
