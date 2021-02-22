@@ -2,7 +2,7 @@
 @import 'base/common';
 @import 'base/content';
 @import 'base/grid';
-
+@import 'base/validation';
 @import 'tabs/tabs';
 @import 'select/select';
 @import 'trumbowyg/trumbowyg';
