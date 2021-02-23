@@ -3,7 +3,6 @@
       {% if fieldset.form.id %}id="form-{{ fieldset.form.id }}"{% endif %}
       {% if fieldset.form.name %}id="form-{{ fieldset.form.name }}"{% endif %}>
     {{ csrf() }}
-    <input type="hidden" id="form-save-action" name="form-save-action" value="form-save-action">
     {% for key, tab in fieldset.form.tabs %}
         <div class="plugin-form-tabs__content {% if key == 'main' %} plugin-form-tabs__content--active {% endif %}">
             <div class="plugin-form-row">
