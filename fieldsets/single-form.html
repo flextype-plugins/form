@@ -3,7 +3,6 @@
       {% if fieldset.form.id %}id="form-{{ fieldset.form.id }}"{% endif %}
       {% if fieldset.form.name %}id="form-{{ fieldset.form.name }}"{% endif %}>
     {{ csrf() }}
-    <input type="hidden" id="form-save-action" name="form-save-action" value="form-save-action">
     <div class="plugin-form-row">
     {% for element, properties in fieldset.form.fields  %}
 
