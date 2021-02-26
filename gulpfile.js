@@ -88,6 +88,9 @@ const gulp           = require('gulp');
     const concat     = require('gulp-concat');
 
     return gulp.src([
+                    // ParsleyJS Form Validatator
+                    'node_modules/parsleyjs/dist/parsley.min.js',
+
                     // Select2
                     'node_modules/select2/dist/js/select2.min.js',
 
