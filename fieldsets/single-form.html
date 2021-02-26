@@ -1,7 +1,8 @@
 <form action="{% if fieldset.form.action %}{{ urlFor(fieldset.form.action) }}{% endif %}"
       method="{% if fieldset.form.method %}{{ fieldset.form.method }}{% else %}post{% endif %}"
-      {% if fieldset.form.id %}id="form-{{ fieldset.form.id }}"{% endif %}
-      {% if fieldset.form.name %}id="form-{{ fieldset.form.name }}"{% endif %}>
+      {% if fieldset.form.id %}id="form_{{ fieldset.form.id }}"{% endif %}
+      {% if fieldset.form.name %}name="form_{{ fieldset.form.name }}"{% endif %}
+      data-parsley-validate>
     {{ csrf() }}
     <div class="plugin-form-row">
     {% for element, properties in fieldset.form.fields  %}
