@@ -38,6 +38,26 @@
   width: 83.333333%;
 }
 
+.plugin-form-w-11\/12 {
+  width: 91.666667%;
+}
+
 .plugin-form-w-full {
   width: 100%;
+}
+
+.plugin-form-w-full {
+  width: 100%;
+}
+
+.plugin-form-w-screen {
+  width: 100vw;
+}
+
+.plugin-form-w-min {
+  width: min-content;
+}
+
+.plugin-form-w-max {
+  width: max-content;
 }
