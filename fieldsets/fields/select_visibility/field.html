@@ -1,4 +1,4 @@
-{% set options = {'draft': tr('admin_entries_draft'), 'visible': tr('admin_entries_visible'), 'hidden': tr('admin_entries_hidden')} %}
+{% set options = {'draft': __('admin_entries_draft'), 'visible': __('admin_entries_visible'), 'hidden': __('admin_entries_hidden')} %}
 <div class="plugin-form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
     <label for="{{ field_id }}" class="plugin-form-label">{{ tr(properties.title) }}</label>
     <select class="plugin-form-control {{ properties.class }} js-select-visibility" name="{{ field_name }}">
