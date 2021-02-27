@@ -1,5 +1,5 @@
 <div class="plugin-form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
-    <label for="{{ field_id }}" class="plugin-form-label">{{ tr(properties.title) }}</label>
+    <label for="{{ field_id }}" class="plugin-form-label">{{ __(properties.title) }}</label>
     <textarea id="{{ field_id }}"
               name="{{ field_name }}"
               rows="0"
@@ -15,7 +15,7 @@
                   {% endfor %}
               {% endif %}>{{ field_value }}</textarea>
     {% if properties.help %}
-        <small>{{ tr(properties.help)}}</small>
+        <small>{{ __(properties.help)}}</small>
     {% endif %}
 </div>
 

@@ -25,7 +25,7 @@
         <nav class="plugin-form-tabs__nav">
             <div class="plugin-form-tabs__nav__links">
                 {% for key, section in fieldset.form.tabs %}
-                    <a href="javascript:;" class="plugin-form-tabs__nav__link {% if key == 'main' %} plugin-form-tabs__nav__link--active {% endif %}">{{ tr(section.title) }}</a>
+                    <a href="javascript:;" class="plugin-form-tabs__nav__link {% if key == 'main' %} plugin-form-tabs__nav__link--active {% endif %}">{{ __(section.title) }}</a>
                 {% endfor %}
             </div>
         </nav>

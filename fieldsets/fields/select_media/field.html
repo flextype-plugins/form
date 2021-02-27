@@ -1,6 +1,6 @@
 {% set media_files = filesystem().find().depth(0).in(PATH_PROJECT ~ '/media/entries/' ~ query.id ~ '/').files() %}
 <div class="plugin-form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
-    <label for="{{ field_id }}" class="plugin-form-label">{{ tr(properties.title) }}</label>
+    <label for="{{ field_id }}" class="plugin-form-label">{{ __(properties.title) }}</label>
     <select class="plugin-form-control {{ properties.class }} js-select-media"
             name="{{ field_name }}"
             {% if properties.events %}
@@ -19,6 +19,6 @@
         {% endfor %}
     </select>
     {% if properties.help %}
-        <small>{{ tr(properties.help)}}</small>
+        <small>{{ __(properties.help)}}</small>
     {% endif %}
 </div>
