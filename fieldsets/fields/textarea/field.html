@@ -5,6 +5,15 @@
               rows="0"
               cols="0"
               class="plugin-form-control {{  properties.class }}"
+              {% if properties.events %}
+                  {% for key, value in properties.events %}
+                       {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
+                                     'onmouseover', 'onmouseup', 'onkeypress', 'onclick', 'ondblclick',
+                                     'onkeydown', 'onblur'] %}
+                           {{ key }} = "{{ value }}"
+                       {% endif %}
+                  {% endfor %}
+              {% endif %}
               {% if properties.validation.error_message %}data-parsley-error-message="{{ tr(properties.validation.error_message) }}"{% endif %}
               {% if properties.validation.equalto %}data-parsley-equalto="{{ properties.validation.equalto }}"{% endif %}
               {% if properties.validation.range %}data-parsley-range="{{ properties.validation.range }}"{% endif %}

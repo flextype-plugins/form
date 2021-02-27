@@ -2,7 +2,16 @@
       method="{% if fieldset.form.method %}{{ fieldset.form.method }}{% else %}post{% endif %}"
       {% if fieldset.form.id %}id="form_{{ fieldset.form.id }}"{% endif %}
       {% if fieldset.form.name %}name="form_{{ fieldset.form.name }}"{% endif %}
-      data-parsley-validate>
+      data-parsley-validate
+      {% if fieldset.form.events %}
+          {% for key, value in fieldset.form.events %}
+               {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
+                             'onmouseover', 'onmouseup', 'onkeypress', 'onclick', 'ondblclick',
+                             'onkeydown', 'onblur', 'onreset', 'onsubmit'] %}
+                   {{ key }} = "{{ value }}"
+               {% endif %}
+          {% endfor %}
+      {% endif %}>
     {{ csrf() }}
     <div class="plugin-form-row">
     {% for element, properties in fieldset.form.fields  %}
@@ -17,21 +26,51 @@
     {% if fieldset.form.buttons %}
         {% for key, button in fieldset.form.buttons %}
             {% if button.type == 'submit' %}
-                <input type="submit" value="{{ __(button.title) }}" class="plugin-form-button plugin-form-button-primary {{ button.class }}">
+                <input type="submit"
+                       id="{{ button.id }}"
+                       value="{{ __(button.title) }}"
+                       class="plugin-form-button plugin-form-button-primary {{ button.class }}"
+                       {% if properties.events %}
+                           {% for key, value in properties.events %}
+                                {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
+                                              'onmouseover', 'onmouseup', 'onkeypress', 'onclick', 'ondblclick',
+                                              'onkeydown', 'onblur'] %}
+                                    {{ key }} = "{{ value }}"
+                                {% endif %}
+                           {% endfor %}
+                       {% endif %}>
             {% endif %}
             {% if button.type == 'button' %}
                 <a href="{{ button.href }}"
                    id="{{ button.id }}"
                    name="{{ button.name }}"
                    target="{{ button.target }}"
-                   class="plugin-form-button plugin-form-button-secondary {{ button.class }}">{{ __(button.title) }}</a>
+                   class="plugin-form-button plugin-form-button-secondary {{ button.class }}"
+                   {% if properties.events %}
+                       {% for key, value in properties.events %}
+                            {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
+                                          'onmouseover', 'onmouseup', 'onkeypress', 'onclick', 'ondblclick',
+                                          'onkeydown', 'onblur'] %}
+                                {{ key }} = "{{ value }}"
+                            {% endif %}
+                       {% endfor %}
+                   {% endif %}>{{ __(button.title) }}</a>
             {% endif %}
             {% if button.type == 'link' %}
                 <a href="{{ button.href }}"
                    id="{{ button.id }}"
                    name="{{ button.name }}"
                    target="{{ button.target }}"
-                   class="plugin-form-button plugin-form-button-link {{ button.class }}">{{ __(button.title) }}</a>
+                   class="plugin-form-button plugin-form-button-link {{ button.class }}"
+                   {% if properties.events %}
+                       {% for key, value in properties.events %}
+                            {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
+                                          'onmouseover', 'onmouseup', 'onkeypress', 'onclick', 'ondblclick',
+                                          'onkeydown', 'onblur'] %}
+                                {{ key }} = "{{ value }}"
+                            {% endif %}
+                       {% endfor %}
+                   {% endif %}>{{ __(button.title) }}</a>
             {% endif %}
         {% endfor %}
     {% endif %}
