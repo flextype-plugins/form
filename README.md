@@ -73,6 +73,17 @@ form:
 | `validation.pattern` | string | | Validation pattern |
 | `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
 | `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
+
 
 #### <a name="field-email"></a> Email
 
@@ -99,6 +110,18 @@ form:
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
 | `validation.pattern` | string | | Validation pattern |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-number"></a> Number
 
@@ -127,6 +150,18 @@ form:
 | `validation.pattern` | string | | Validation pattern |
 | min | int | | Minimum value for number field |
 | max | int | | Maximum value for number field |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-password"></a> Password
 
@@ -153,6 +188,18 @@ form:
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
 | `validation.pattern` | string | | Validation pattern |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-textarea"></a> Textarea
 
@@ -179,6 +226,18 @@ form:
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
 | `validation.pattern` | string | | Validation pattern |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-html"></a> HTML
 
@@ -207,6 +266,18 @@ form:
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
 | `validation.pattern` | string | | Validation pattern |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-hidden"></a> Hidden
 
@@ -233,6 +304,18 @@ form:
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
 | `validation.pattern` | string | | Validation pattern |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-heading"></a> Heading
 
@@ -284,6 +367,18 @@ form:
 | `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
 | `options` | array | | Array of options |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-select-template"></a> Select Template
 
@@ -307,6 +402,18 @@ form:
 | `help` | string | | Optional help text below the field |
 | `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-select-visibility"></a> Select Visibility
 
@@ -330,6 +437,18 @@ form:
 | `help` | string | | Optional help text below the field |
 | `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-select-routable"></a> Select Routable
 
@@ -353,6 +472,18 @@ form:
 | `help` | string | | Optional help text below the field |
 | `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-select-media"></a> Select Media
 
@@ -376,6 +507,18 @@ form:
 | `help` | string | | Optional help text below the field |
 | `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-tags"></a> Tags
 
@@ -399,6 +542,18 @@ form:
 | `help` | string | | Optional help text below the field |
 | `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 #### <a name="field-datetimepicker"></a> Date Time Picker
 
@@ -422,6 +577,18 @@ form:
 | `help` | string | | Optional help text below the field |
 | `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onmousemove` | string | | The onmousemove event occurs when the pointer is moving while it is over an element. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseout` | string | | The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. |
+| `events.onmouseover` | string | | The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. |
+| `events.onmouseup` | string | | The onmouseup event occurs when a user releases a mouse button over an element. |
+| `events.onkeypress` | string | | The onkeypress event occurs when the user presses a key (on the keyboard). |
+| `events.onkeydown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
+| `events.onclick` | string | | The onclick event occurs when the user clicks on an element. |
+| `events.ondblclick` | string | | The ondblclick event occurs when the user double-clicks on an element. |
+| `events.onblur` | string | | The onblur event occurs when an object loses focus. |
 
 ### Basic Fieldset Example
 
@@ -484,18 +651,21 @@ form:
 ### Rendering forms in the TWIG templates
 
 ```
-{% set registration_form_file = PATH_PROJECT ~ '/fieldsets/default.yaml' %}
+{% set registrationFormFilePath = PATH_PROJECT ~ '/fieldsets/default.yaml' %}
+{% set registrationFormFileContent = filesystem().file(registrationFormFilePath).get() %}
+{% set registrationForm = flextype.serializers.yaml.decode(registrationFormFileContent) %}
 
-{{ flextype.form.render(flextype.serializers.yaml.decode(filesystem().file(registration_form_file).get()), {})|raw }}
+{{ flextype.form.render(registrationForm, {})|raw }}
 ```
 
 ### Processing form in the Backend
 
 ```
+use Flextype\Middlewares\CsrfMiddleware;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-flextype()->post('{uri:.+}', function(Request $request, Response $response) {
+flextype()->post('/route-name', function(Request $request, Response $response) {
 
     // get post data
     $post_data = $request->getParsedBody();
@@ -505,7 +675,7 @@ flextype()->post('{uri:.+}', function(Request $request, Response $response) {
 
     // redirect
     return $response->withRedirect('./');
-})->add('csrf');
+})->add(new CsrfMiddleware());
 ```
 
 ## LICENSE
