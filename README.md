@@ -650,7 +650,7 @@ form:
 
 ### Rendering forms in the TWIG templates
 
-```
+```twig
 {% set registrationFormFilePath = PATH_PROJECT ~ '/fieldsets/default.yaml' %}
 {% set registrationFormFileContent = filesystem().file(registrationFormFilePath).get() %}
 {% set registrationForm = flextype.serializers.yaml.decode(registrationFormFileContent) %}
@@ -660,7 +660,7 @@ form:
 
 ### Processing form in the Backend
 
-```
+```php
 use Flextype\Middlewares\CsrfMiddleware;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
