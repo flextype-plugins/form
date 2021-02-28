@@ -66,11 +66,13 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `default` | string | | Default value for the field, which will be used when entry is created |
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
 | `validation.pattern` | string | | Validation pattern |
+| `events.onkeyup` | string | | The onkeyup event occurs when the user releases a key (on the keyboard). |
+| `events.onmousedown` | string | | The onkeydown event occurs when the user is pressing a key (on the keyboard). |
 
 #### <a name="field-email"></a> Email
 
@@ -92,7 +94,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `default` | string | | Default value for the field, which will be used when entry is created |
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
@@ -118,7 +120,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `default` | string | | Default value for the field, which will be used when entry is created |
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
@@ -146,7 +148,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `default` | string | | Default value for the field, which will be used when entry is created |
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
@@ -172,7 +174,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `default` | string | | Default value for the field, which will be used when entry is created |
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
@@ -200,7 +202,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `default` | string | | Default value for the field, which will be used when entry is created |
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
@@ -226,7 +228,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `default` | string | | Default value for the field, which will be used when entry is created |
 | `class` | string | | CSS class |
 | `validation.required` | boolean | | Set is this field required or not. Set `true` or `false` |
@@ -251,7 +253,7 @@ form:
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
 | `h` | int | 3 | Heading size from 1 to 6 |
 
@@ -279,7 +281,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
 | `options` | array | | Array of options |
 
@@ -303,7 +305,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
 
 #### <a name="field-select-visibility"></a> Select Visibility
@@ -326,7 +328,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
 
 #### <a name="field-select-routable"></a> Select Routable
@@ -349,7 +351,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
 
 #### <a name="field-select-media"></a> Select Media
@@ -372,7 +374,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
 
 #### <a name="field-tags"></a> Tags
@@ -395,7 +397,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
 
 #### <a name="field-datetimepicker"></a> Date Time Picker
@@ -418,7 +420,7 @@ form:
 | --- | --- | --- | --- |
 | `title` | string | | The field label title |
 | `help` | string | | Optional help text below the field |
-| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12 |
+| `size` | string | 12 | The width of the field in the field grid. Available widths: 1/12, 2/12, 3/12, 4/12, 5/12, 6/12, 7/12, 8/12, 9/12, 10/12, 11/12, 12, full, min, max, screen |
 | `class` | string | | CSS class |
 
 ### Basic Fieldset Example
