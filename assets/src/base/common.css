@@ -10,27 +10,3 @@ button:active {
      border-color: #000000;
      font-weight: 300;
 }
-
-.plugin-form-message-success {
-    border-radius: 0.25rem;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #16171a;
-    color: #ffffff;
-    background-color: #16171a;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding: 10px 20px;
-}
-
-.plugin-form-message-error {
-    padding: 10px 20px;
-    border-radius: 0.25rem;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #16171a;
-    color: #ffffff;
-    background-color: #16171a;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-}
