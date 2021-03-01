@@ -1,7 +1,7 @@
 <form action="{% if fieldset.form.action %}{{ urlFor(fieldset.form.action) }}{% endif %}"
       method="{% if fieldset.form.method %}{{ fieldset.form.method }}{% else %}post{% endif %}"
-      {% if fieldset.form.id %}id="form_{{ fieldset.form.id }}"{% endif %}
-      {% if fieldset.form.name %}name="form_{{ fieldset.form.name }}"{% endif %}
+      {% if fieldset.form.id %}id="{{ fieldset.form.id }}"{% endif %}
+      {% if fieldset.form.name %}name="{{ fieldset.form.name }}"{% endif %}
       data-parsley-validate
       {% if fieldset.form.events %}
           {% for key, value in fieldset.form.events %}
