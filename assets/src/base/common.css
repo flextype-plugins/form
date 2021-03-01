@@ -3,10 +3,3 @@ button:focus,
 button:active {
     outline: none;
 }
-
-.plugin-form-heading {
-     font-size: 1.875rem;
-     border-bottom-width: 1px;
-     border-color: #000000;
-     font-weight: 300;
-}

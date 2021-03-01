@@ -1,6 +1,7 @@
 @import 'base/variables';
 @import 'base/common';
 @import 'base/messages';
+@import 'base/headings';
 @import 'base/content';
 @import 'base/grid';
 @import 'base/validation';
