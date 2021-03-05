@@ -44,8 +44,7 @@ if (flextype('registry')->get('plugins.form.settings.load_on_admin')) {
     flextype('registry')->set(
         'assets.admin.css',
         array_merge($adminCSS, [
-            'project/plugins/form/assets/dist/css/form-vendor-build.min.css',
-            'project/plugins/form/assets/dist/css/form-build.min.css',
+            'project/plugins/form/assets/dist/css/flextype-ui.min.css',
         ])
     );
 }
@@ -54,21 +53,20 @@ if (flextype('registry')->get('plugins.form.settings.load_on_site')) {
     flextype('registry')->set(
         'assets.site.css',
         array_merge($siteCSS, [
-            'project/plugins/form/assets/dist/css/form-vendor-build.min.css',
-            'project/plugins/form/assets/dist/css/form-build.min.css',
+            'project/plugins/form/assets/dist/css/flextype-ui.min.css',
         ])
     );
 }
 
 if (flextype('registry')->get('flextype.settings.locale') === 'en_US') {
-    $_locale = 'en';
+    $locale = 'en';
 } else {
-    $_locale = substr(strtolower(flextype('registry')->get('flextype.settings.locale')), 0, 2);
+    $locale = substr(strtolower(flextype('registry')->get('flextype.settings.locale')), 0, 2);
 }
 
-if ($_locale !== 'en') {
-    $trumbowygLocaleJS = 'project/plugins/form/assets/dist/lang/trumbowyg/langs/' . $_locale . '.min.js';
-    $flatpickrLocaleJS = 'project/plugins/form/assets/dist/lang/flatpickr/l10n/' . $_locale . '.js';
+if ($locale !== 'en') {
+    $trumbowygLocaleJS = 'project/plugins/form/assets/dist/lang/trumbowyg/langs/' . $locale . '.min.js';
+    $flatpickrLocaleJS = 'project/plugins/form/assets/dist/lang/flatpickr/l10n/' . $locale . '.js';
 } else {
     $trumbowygLocaleJS = '';
     $flatpickrLocaleJS = '';
@@ -81,10 +79,9 @@ if (flextype('registry')->get('plugins.form.settings.load_on_admin')) {
     flextype('registry')->set(
         'assets.admin.js',
         array_merge($adminJS, [
-            'project/plugins/form/assets/dist/js/form-vendor-build.min.js',
+            'project/plugins/form/assets/dist/js/flextype-ui.min.js',
             $trumbowygLocaleJS,
             $flatpickrLocaleJS,
-            'project/plugins/form/assets/dist/js/form-build.min.js',
         ])
     );
 }
@@ -93,10 +90,9 @@ if (flextype('registry')->get('plugins.form.settings.load_on_site')) {
     flextype('registry')->set(
         'assets.site.js',
         array_merge($siteJS, [
-            'project/plugins/form/assets/dist/js/form-vendor-build.min.js',
+            'project/plugins/form/assets/dist/js/flextype-ui.min.js',
             $trumbowygLocaleJS,
             $flatpickrLocaleJS,
-            'project/plugins/form/assets/dist/js/form-build.min.js',
         ])
     );
 }
