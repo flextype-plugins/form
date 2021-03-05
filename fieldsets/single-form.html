@@ -13,7 +13,7 @@
           {% endfor %}
       {% endif %}>
     {{ csrf() }}
-    <div class="plugin-form-row">
+    <div class="plugin-form-fields-wrapper plugin-form-row">
     {% for element, properties in fieldset.form.fields  %}
 
         {% set field_name = flextype.form.getElementName(element) %}
@@ -24,6 +24,7 @@
     {% endfor %}
     </div>
     {% if fieldset.form.buttons %}
+    <div class="plugin-form-buttons">
         {% for key, button in fieldset.form.buttons %}
             {% if button.type == 'submit' %}
                 <input type="submit"
@@ -74,4 +75,5 @@
             {% endif %}
         {% endfor %}
     {% endif %}
+    </div>
 </form>

@@ -4,6 +4,13 @@
     margin: 0;
 }
 
+.plugin-form-fields-wrapper {
+    border-top: 1px solid rgb(225, 228, 232);
+    border-bottom: 1px solid rgb(225, 228, 232);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .plugin-form-label
 {
     margin-bottom: .5rem;
@@ -58,6 +65,10 @@
     width: 100%;
     padding-right: 10px;
     padding-left: 10px;
+}
+
+.plugin-form-buttons {
+    padding-top: 24px;
 }
 
 .plugin-form-button {

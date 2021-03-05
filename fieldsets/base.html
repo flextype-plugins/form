@@ -21,6 +21,11 @@
 %}
 
 <div class="plugin-form-wrapper {% if fieldset.size %}{{ sizes[fieldset.size] }}{% else %}{{ sizes[12] }}{% endif %}">
+
+    {% if fieldset.form.heading %}
+        <h{% if fieldset.form.heading.h %}{{ fieldset.form.heading.h }}{% else %}3{% endif %} class="plugin-form-heading {{ fieldset.form.heading.class }}">{{ __(fieldset.form.heading.title) }}</h{% if properties.h %}{{ properties.h }}{% else %}3{% endif %}>
+    {% endif %}
+
     {% if fieldset.form.tabs %}
         <nav class="plugin-form-tabs__nav">
             <div class="plugin-form-tabs__nav__links">
