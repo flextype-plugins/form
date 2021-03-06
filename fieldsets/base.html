@@ -1,37 +1,63 @@
 {% set colSize =
     {
-        '1/12': 'col-md-1',
-        '2/12': 'col-md-2',
-        '3/12': 'col-md-3',
-        '4/12': 'col-md-4',
-        '5/12': 'col-md-5',
-        '6/12': 'col-md-6',
-        '7/12': 'col-md-7',
-        '8/12': 'col-md-8',
-        '9/12': 'col-md-9',
+        '1/12':  'col-md-1',
+        '2/12':  'col-md-2',
+        '3/12':  'col-md-3',
+        '4/12':  'col-md-4',
+        '5/12':  'col-md-5',
+        '6/12':  'col-md-6',
+        '7/12':  'col-md-7',
+        '8/12':  'col-md-8',
+        '9/12':  'col-md-9',
         '10/12': 'col-md-10',
         '11/12': 'col-md-12',
         '12/12': 'col-md-12',
-        '12': 'col-md-12',
-        'full': 'col-md-12',
+        '12':    'col-md-12',
+        'full':  'col-md-12',
      }
+%}
+
+{% set headingSize =
+    {
+        'huge':   '1',
+        'large':  '2',
+        'medium': '3',
+        'small':  '4',
+        'tiny':   '5',
+     }
+%}
+
+{% set fields =
+    [
+        'text',
+        'email',
+        'password',
+        'textarea',
+        'hidden',
+        'number',
+        'datetimepicker',
+        'heading',
+        'html',
+        'tags',
+        'select',
+        'select_routable',
+        'select_visibility',
+        'select_template',
+        'select_media'
+    ]
 %}
 
 <div class="{% if fieldset.size %}{{ colSize[fieldset.size] }}{% else %}{{ colSize[12] }}{% endif %}">
 
-    {% if fieldset.form.heading %}
-        <h{% if fieldset.form.heading.h %}{{ fieldset.form.heading.h }}{% else %}3{% endif %} class="mb-3 {{ fieldset.form.heading.class }}">{{ __(fieldset.form.heading.title) }}</h{% if properties.h %}{{ properties.h }}{% else %}3{% endif %}>
+    {% if fieldset.header %}
+        <div class="header">
+            <div class="header-title"><h1 class="{{ fieldset.header.class }}">{{ __(fieldset.header.title) }}</h1></div>
+            <div class="header-buttons">{% include "plugins/form/fieldsets/buttons.html" with {"buttons": fieldset.header.buttons} %}</div>
+        </div>
     {% endif %}
 
     {% if fieldset.form.tabs %}
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            {% for key, section in fieldset.form.tabs %}
-            <li class="nav-item" role="presentation">
-                <button class="nav-link {% if key == 'main' %}active{% endif %}" id="{{ key }}-tab-link" data-bs-toggle="tab" data-bs-target="#{{ key }}-tab" type="button" role="tab" aria-controls="{{ key }}-tab" aria-selected="{% if key == 'main' %}true{% else %}false{% endif %}">{{ __(section.title) }}</button>
-            </li>
-            {% endfor %}
-        </ul>
-        {% include "plugins/form/fieldsets/multi-form.html" %}
+        {% include "plugins/form/fieldsets/tabs-form.html" %}
     {% else %}
         {% include "plugins/form/fieldsets/single-form.html" %}
     {% endif %}

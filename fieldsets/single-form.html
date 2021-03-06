@@ -24,56 +24,8 @@
     {% endfor %}
     </div>
     {% if fieldset.form.buttons %}
-    <div class="mt-3">
-        {% for key, button in fieldset.form.buttons %}
-            {% if button.type == 'submit' %}
-                <input type="submit"
-                       id="{{ button.id }}"
-                       value="{{ __(button.title) }}"
-                       class="btn btn-primary {{ button.class }}"
-                       {% if properties.events %}
-                           {% for key, value in properties.events %}
-                                {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
-                                              'onmouseover', 'onmouseup', 'onkeypress', 'onclick', 'ondblclick',
-                                              'onkeydown', 'onblur'] %}
-                                    {{ key }} = "{{ value }}"
-                                {% endif %}
-                           {% endfor %}
-                       {% endif %}>
-            {% endif %}
-            {% if button.type == 'button' %}
-                <a href="{{ button.href }}"
-                   id="{{ button.id }}"
-                   name="{{ button.name }}"
-                   target="{{ button.target }}"
-                   class="btn btn-secondary {{ button.class }}"
-                   {% if properties.events %}
-                       {% for key, value in properties.events %}
-                            {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
-                                          'onmouseover', 'onmouseup', 'onkeypress', 'onclick', 'ondblclick',
-                                          'onkeydown', 'onblur'] %}
-                                {{ key }} = "{{ value }}"
-                            {% endif %}
-                       {% endfor %}
-                   {% endif %}>{{ __(button.title) }}</a>
-            {% endif %}
-            {% if button.type == 'link' %}
-                <a href="{{ button.href }}"
-                   id="{{ button.id }}"
-                   name="{{ button.name }}"
-                   target="{{ button.target }}"
-                   class="btn btn-link {{ button.class }}"
-                   {% if properties.events %}
-                       {% for key, value in properties.events %}
-                            {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
-                                          'onmouseover', 'onmouseup', 'onkeypress', 'onclick', 'ondblclick',
-                                          'onkeydown', 'onblur'] %}
-                                {{ key }} = "{{ value }}"
-                            {% endif %}
-                       {% endfor %}
-                   {% endif %}>{{ __(button.title) }}</a>
-            {% endif %}
-        {% endfor %}
+        <div class="mt-3">
+            {% include "plugins/form/fieldsets/buttons.html" with {"buttons": fieldset.form.buttons} %}
+        </div>
     {% endif %}
-    </div>
 </form>
