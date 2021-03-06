@@ -1,10 +1,10 @@
-<div class="plugin-form-group {% if properties.size %}{{ colSize[properties.size] }}{% else %}{{ colSize[12] }}{% endif %}">
-    <label for="{{ field_id }}" class="plugin-form-label">{{ __(properties.title) }}</label>
+<div class="mb-3 {{ grid.col(properties.size, properties.grid) }}">
+    <label for="{{ field_id }}" class="form-label">{{ __(properties.title) }}</label>
     <textarea id="{{ field_id }}"
               name="{{ field_name }}"
               rows="0"
               cols="0"
-              class="js-html-editor plugin-form-control {{ properties.class }}"
+              class="js-html-editor form-control {{ properties.class }}"
               {% if properties.events %}
                   {% for key, value in properties.events %}
                        {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',

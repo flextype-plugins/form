@@ -1,3 +1,3 @@
-<div class="plugin-form-group {% if properties.size %}{{ colSize[properties.size] }}{% else %}{{ colSize[12] }}{% endif %}">
-    <h{% if properties.h %}{{ properties.h }}{% else %}3{% endif %} id="{{ field_id }}" class="plugin-form-heading {{ properties.class }}">{{ __(properties.title) }}</h{% if properties.h %}{{ properties.h }}{% else %}3{% endif %}>
+<div class="mb-3 {{ grid.col(properties.size, properties.grid) }}">
+    <h{% if properties.h %}{{ properties.h }}{% else %}3{% endif %} id="{{ field_id }}" class="{{ properties.class }}">{{ __(properties.title) }}</h{% if properties.h %}{{ properties.h }}{% else %}3{% endif %}>
 </div>

@@ -1,4 +1,4 @@
-<div class="mb-3 {% if properties.size %}{{ colSize[properties.size] }}{% else %}{{ colSize[12] }}{% endif %}">
+<div class="mb-3 {{ grid.col(properties.size, properties.grid) }}">
     <label for="{{ field_id }}" class="form-label">{{ __(properties.title) }}</label>
     <input type="text"
            id="{{ field_id }}"

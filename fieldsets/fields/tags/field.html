@@ -1,7 +1,7 @@
 {% set field_value = field_value|split(',') %}
-<div class="plugin-form-group {% if properties.size %}{{ colSize[properties.size] }}{% else %}{{ colSize[12] }}{% endif %}">
-    <label for="{{ field_id }}" class="plugin-form-label">{{ __(properties.title) }}</label>
-    <select class="plugin-form-control js-select-tags {{ properties.class }}"
+<div class="mb-3 {{ grid.col(properties.size, properties.grid) }}">
+    <label for="{{ field_id }}" class="form-label">{{ __(properties.title) }}</label>
+    <select class="form-control js-select-tags {{ properties.class }}"
             data-name="{{ field_name }}"
             multiple="multiple"
             {% if properties.events %}
