@@ -44,7 +44,7 @@ if (flextype('registry')->get('plugins.form.settings.load_on_admin')) {
     flextype('registry')->set(
         'assets.admin.css',
         array_merge($adminCSS, [
-            'project/plugins/form/assets/dist/css/flextype-ui.min.css',
+            'project/plugins/form/assets/dist/css/flextype-ui.min.css?v=' . filemtime('project/plugins/form/assets/dist/css/flextype-ui.min.css'),
         ])
     );
 }
@@ -53,7 +53,7 @@ if (flextype('registry')->get('plugins.form.settings.load_on_site')) {
     flextype('registry')->set(
         'assets.site.css',
         array_merge($siteCSS, [
-            'project/plugins/form/assets/dist/css/flextype-ui.min.css',
+            'project/plugins/form/assets/dist/css/flextype-ui.min.css?v=' . filemtime('project/plugins/form/assets/dist/css/flextype-ui.min.css'),
         ])
     );
 }
@@ -79,7 +79,7 @@ if (flextype('registry')->get('plugins.form.settings.load_on_admin')) {
     flextype('registry')->set(
         'assets.admin.js',
         array_merge($adminJS, [
-            'project/plugins/form/assets/dist/js/flextype-ui.min.js',
+            'project/plugins/form/assets/dist/js/flextype-ui.min.js?v=' . filemtime('project/plugins/form/assets/dist/js/flextype-ui.min.js'),
             $trumbowygLocaleJS,
             $flatpickrLocaleJS,
         ])
@@ -90,7 +90,7 @@ if (flextype('registry')->get('plugins.form.settings.load_on_site')) {
     flextype('registry')->set(
         'assets.site.js',
         array_merge($siteJS, [
-            'project/plugins/form/assets/dist/js/flextype-ui.min.js',
+            'project/plugins/form/assets/dist/js/flextype-ui.min.js?v=' . filemtime('project/plugins/form/assets/dist/js/flextype-ui.min.js'),
             $trumbowygLocaleJS,
             $flatpickrLocaleJS,
         ])
