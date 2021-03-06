@@ -1,4 +1,4 @@
-{% set sizes =
+{% set colSize =
     {
         '1/12': 'col-md-1',
         '2/12': 'col-md-2',
@@ -17,7 +17,7 @@
      }
 %}
 
-<div class="{% if fieldset.size %}{{ sizes[fieldset.size] }}{% else %}{{ sizes[12] }}{% endif %}">
+<div class="{% if fieldset.size %}{{ colSize[fieldset.size] }}{% else %}{{ colSize[12] }}{% endif %}">
 
     {% if fieldset.form.heading %}
         <h{% if fieldset.form.heading.h %}{{ fieldset.form.heading.h }}{% else %}3{% endif %} class="mb-3 {{ fieldset.form.heading.class }}">{{ __(fieldset.form.heading.title) }}</h{% if properties.h %}{{ properties.h }}{% else %}3{% endif %}>

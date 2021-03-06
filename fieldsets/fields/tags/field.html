@@ -1,5 +1,5 @@
 {% set field_value = field_value|split(',') %}
-<div class="plugin-form-group {% if properties.size %}{{ sizes[properties.size] }}{% else %}{{ sizes[12] }}{% endif %}">
+<div class="plugin-form-group {% if properties.size %}{{ colSize[properties.size] }}{% else %}{{ colSize[12] }}{% endif %}">
     <label for="{{ field_id }}" class="plugin-form-label">{{ __(properties.title) }}</label>
     <select class="plugin-form-control js-select-tags {{ properties.class }}"
             data-name="{{ field_name }}"
