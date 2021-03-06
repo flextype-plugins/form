@@ -59,7 +59,7 @@ sass.compiler      = require('node-sass');
     return gulp
         .src([
 
-            // ParsleyJS Form Validatator
+            // jQuery Form Validatator
             'node_modules/jquery/dist/jquery.min.js',
 
             // ParsleyJS Form Validatator
@@ -87,7 +87,6 @@ sass.compiler      = require('node-sass');
             'assets/src/select-tags/select-tags.js',
             'assets/src/select-template/select-template.js',
             'assets/src/select-visibility/select-visibility.js',
-            'assets/src/tabs/tabs.js',
             'assets/src/trumbowyg/trumbowyg.js',
         ])
         .pipe(sourcemaps.init())
