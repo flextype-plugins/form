@@ -13,7 +13,7 @@
           {% endfor %}
       {% endif %}>
     {{ csrf() }}
-    <div class="plugin-form-fields-wrapper plugin-form-row">
+    <div class="row">
     {% for element, properties in fieldset.form.fields  %}
 
         {% set field_name = flextype.form.getElementName(element) %}
@@ -24,13 +24,13 @@
     {% endfor %}
     </div>
     {% if fieldset.form.buttons %}
-    <div class="plugin-form-buttons">
+    <div class="mt-3">
         {% for key, button in fieldset.form.buttons %}
             {% if button.type == 'submit' %}
                 <input type="submit"
                        id="{{ button.id }}"
                        value="{{ __(button.title) }}"
-                       class="plugin-form-button plugin-form-button-primary {{ button.class }}"
+                       class="btn btn-primary {{ button.class }}"
                        {% if properties.events %}
                            {% for key, value in properties.events %}
                                 {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
@@ -46,7 +46,7 @@
                    id="{{ button.id }}"
                    name="{{ button.name }}"
                    target="{{ button.target }}"
-                   class="plugin-form-button plugin-form-button-secondary {{ button.class }}"
+                   class="btn btn-secondary {{ button.class }}"
                    {% if properties.events %}
                        {% for key, value in properties.events %}
                             {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
@@ -62,7 +62,7 @@
                    id="{{ button.id }}"
                    name="{{ button.name }}"
                    target="{{ button.target }}"
-                   class="plugin-form-button plugin-form-button-link {{ button.class }}"
+                   class="btn btn-link {{ button.class }}"
                    {% if properties.events %}
                        {% for key, value in properties.events %}
                             {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',

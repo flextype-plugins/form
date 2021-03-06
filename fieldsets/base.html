@@ -1,42 +1,37 @@
 {% set sizes =
     {
-        '1/12': 'plugin-form-col plugin-form-w-1/12',
-        '2/12': 'plugin-form-col plugin-form-w-2/12',
-        '3/12': 'plugin-form-col plugin-form-w-3/12',
-        '4/12': 'plugin-form-col plugin-form-w-4/12',
-        '5/12': 'plugin-form-col plugin-form-w-5/12',
-        '6/12': 'plugin-form-col plugin-form-w-6/12',
-        '7/12': 'plugin-form-col plugin-form-w-7/12',
-        '8/12': 'plugin-form-col plugin-form-w-8/12',
-        '9/12': 'plugin-form-col plugin-form-w-9/12',
-        '10/12': 'plugin-form-col plugin-form-w-10/12',
-        '11/12': 'plugin-form-col plugin-form-w-11/12',
-        '12/12': 'plugin-form-col plugin-form-w-full',
-        '12': 'plugin-form-col plugin-form-w-full',
-        'full': 'plugin-form-col plugin-form-w-full',
-        'screen': 'plugin-form-col plugin-form-w-screen',
-        'min': 'plugin-form-col plugin-form-w-min',
-        'max': 'plugin-form-col plugin-form-w-max',
+        '1/12': 'col-md-1',
+        '2/12': 'col-md-2',
+        '3/12': 'col-md-3',
+        '4/12': 'col-md-4',
+        '5/12': 'col-md-5',
+        '6/12': 'col-md-6',
+        '7/12': 'col-md-7',
+        '8/12': 'col-md-8',
+        '9/12': 'col-md-9',
+        '10/12': 'col-md-10',
+        '11/12': 'col-md-12',
+        '12/12': 'col-md-12',
+        '12': 'col-md-12',
+        'full': 'col-md-12',
      }
 %}
 
-<div class="plugin-form-wrapper {% if fieldset.size %}{{ sizes[fieldset.size] }}{% else %}{{ sizes[12] }}{% endif %}">
+<div class="{% if fieldset.size %}{{ sizes[fieldset.size] }}{% else %}{{ sizes[12] }}{% endif %}">
 
     {% if fieldset.form.heading %}
-        <h{% if fieldset.form.heading.h %}{{ fieldset.form.heading.h }}{% else %}3{% endif %} class="plugin-form-heading {{ fieldset.form.heading.class }}">{{ __(fieldset.form.heading.title) }}</h{% if properties.h %}{{ properties.h }}{% else %}3{% endif %}>
+        <h{% if fieldset.form.heading.h %}{{ fieldset.form.heading.h }}{% else %}3{% endif %} class="mb-3 {{ fieldset.form.heading.class }}">{{ __(fieldset.form.heading.title) }}</h{% if properties.h %}{{ properties.h }}{% else %}3{% endif %}>
     {% endif %}
 
     {% if fieldset.form.tabs %}
-        <nav class="plugin-form-tabs__nav">
-            <div class="plugin-form-tabs__nav__links">
-                {% for key, section in fieldset.form.tabs %}
-                    <a href="javascript:;" class="plugin-form-tabs__nav__link {% if key == 'main' %} plugin-form-tabs__nav__link--active {% endif %}">{{ __(section.title) }}</a>
-                {% endfor %}
-            </div>
-        </nav>
-        <div class="plugin-form-tabs">
-            {% include "plugins/form/fieldsets/multi-form.html" %}
-        </div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            {% for key, section in fieldset.form.tabs %}
+            <li class="nav-item" role="presentation">
+                <button class="nav-link {% if key == 'main' %}active{% endif %}" id="{{ key }}-tab-link" data-bs-toggle="tab" data-bs-target="#{{ key }}-tab" type="button" role="tab" aria-controls="{{ key }}-tab" aria-selected="{% if key == 'main' %}true{% else %}false{% endif %}">{{ __(section.title) }}</button>
+            </li>
+            {% endfor %}
+        </ul>
+        {% include "plugins/form/fieldsets/multi-form.html" %}
     {% else %}
         {% include "plugins/form/fieldsets/single-form.html" %}
     {% endif %}

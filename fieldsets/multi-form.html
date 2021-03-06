@@ -13,9 +13,10 @@
           {% endfor %}
       {% endif %}>
     {{ csrf() }}
+    <div class="tab-content" id="myTabContent">
     {% for key, tab in fieldset.form.tabs %}
-        <div class="plugin-form-tabs__content {% if key == 'main' %} plugin-form-tabs__content--active {% endif %}">
-            <div class="plugin-form-row">
+        <div class="tab-pane fade {% if key == 'main' %}show active{% endif %}" id="{{ key }}-tab" role="tabpanel" aria-labelledby="{{ key }}-tab">
+            <div class="row">
                 {% for element, properties in fieldset['form']['tabs'][key]['fields']  %}
 
                     {% set field_name = flextype.form.getElementName(element) %}
@@ -28,13 +29,14 @@
             </div>
         </div>
     {% endfor %}
+    </div>
     {% if fieldset.form.buttons %}
         {% for key, button in fieldset.form.buttons %}
             {% if button.type == 'submit' %}
                 <input type="submit"
                        id="{{ button.id }}"
                        value="{{ __(button.title) }}"
-                       class="plugin-form-button plugin-form-button-primary {{ button.class }}"
+                       class="btn btn-primary {{ button.class }}"
                        {% if properties.events %}
                            {% for key, value in properties.events %}
                                 {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
@@ -50,7 +52,7 @@
                    id="{{ button.id }}"
                    name="{{ button.name }}"
                    target="{{ button.target }}"
-                   class="plugin-form-button plugin-form-button-secondary {{ button.class }}"
+                   class="btn btn-secondary {{ button.class }}"
                    {% if properties.events %}
                        {% for key, value in properties.events %}
                             {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
@@ -66,7 +68,7 @@
                    id="{{ button.id }}"
                    name="{{ button.name }}"
                    target="{{ button.target }}"
-                   class="plugin-form-button plugin-form-button-link {{ button.class }}"
+                   class="btn btn-link {{ button.class }}"
                    {% if properties.events %}
                        {% for key, value in properties.events %}
                             {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
