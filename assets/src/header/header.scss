@@ -1,0 +1,20 @@
+.header {
+    @extend .row;
+    @extend .mb-3;
+    @extend .d-flex;
+    @extend .align-items-center;
+
+    .header-title {
+        @extend .col;
+
+        > h1 {
+            @extend .p-0;
+            @extend .m-0;
+        }
+    }
+
+    .header-buttons {
+        @extend .col;
+        @extend .text-end;
+    }
+}
