@@ -13,7 +13,7 @@
           {% endfor %}
       {% endif %}>
     {{ csrf() }}
-    <ul class="nav nav-tabs" id="workspaceTab" role="tablist">
+    <ul class="nav nav-tabs mb-3" id="workspaceTab" role="tablist">
         {% for key, section in fieldset.form.tabs %}
         <li class="nav-item" role="presentation">
             <button class="nav-link {% if key == 'main' %}active{% endif %}"
