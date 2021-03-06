@@ -5,7 +5,7 @@
            id="{{ field_id }}"
            name="{{ field_id }}"
            value="{{ field_value|date(flextype.registry.get('flextype.settings.date_display_format')) }}"
-           class="form-control js-datetimepicker {{ properties.class }}"
+           class="form-control flatpickr js-datetimepicker {{ properties.class }}"
            {% if properties.events %}
                {% for key, value in properties.events %}
                     {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
