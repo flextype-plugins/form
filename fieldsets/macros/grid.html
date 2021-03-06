@@ -1,4 +1,4 @@
-{% macro col(size = '12', option = 'medium') %}
+{% macro col(size, option) %}
 {% apply spaceless %}
     {% set colSize =
         {
@@ -30,8 +30,8 @@
          }
     %}
 
-    {% if size not in colSize %}{% set size = 12 %}{% endif %}
-    {% if option not in colSizeOptions %}{% set option = 'medium' %}{% endif %}
+    {% if size not in colSize|keys %}{% set size = 12 %}{% endif %}
+    {% if option not in colSizeOptions|keys %}{% set option = 'medium' %}{% endif %}
 
     {{ colSize[size]|replace({'{option}': colSizeOptions[option] }) }}
 {% endapply %}

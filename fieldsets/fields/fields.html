@@ -1,6 +1,5 @@
-{% import "plugins/form/fieldsets/macros/grid.html" as grid %}
 {% for field in fields %}
     {% if properties.type == field %}
-        {% include "plugins/form/fieldsets/fields/" ~ field ~ "/field.html" with {"grid": grid} %}
+        {% include "plugins/form/fieldsets/fields/" ~ field ~ "/field.html" %}
     {% endif %}
 {% endfor %}

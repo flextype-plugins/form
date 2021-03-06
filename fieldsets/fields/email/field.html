@@ -1,3 +1,4 @@
+{% import "plugins/form/fieldsets/macros/grid.html" as grid %}
 <div class="mb-3 {{ grid.col(properties.size, properties.grid) }}">
     <label for="{{ field_id }}" class="form-label">{{ __(properties.title) }}</label>
     <input type="email"
