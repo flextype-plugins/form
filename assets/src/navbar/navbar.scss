@@ -1,6 +1,6 @@
 .workspace-navigation {
     background-color: white;
-    border-bottom: 1px solid #e1e4e8;
+    border-bottom: 1px solid $border-color;
 
     a {
         color: $body-color;
@@ -15,7 +15,7 @@
         content: "/";
         position: absolute;
         left: -3px;
-        color: #e1e4e8;
+        color: $border-color;
     }
 
     .dropdown-toggle {
