@@ -1,0 +1,31 @@
+.workspace-navigation {
+    background-color: white;
+    border-bottom: 1px solid #e1e4e8;
+
+    a {
+        color: $body-color;
+    }
+
+    .nav-item > .nav-link {
+        position: relative;
+        color: $body-color;
+    }
+
+    .nav-item:not(:first-of-type) > .nav-link::before {
+        content: "/";
+        position: absolute;
+        left: -3px;
+        color: #e1e4e8;
+    }
+
+    .dropdown-toggle {
+        @extend .d-flex;
+        @extend .ps-0;
+
+        &:after {
+            position: absolute;
+            top: 13px;
+            right: 0;
+        }
+    }
+}
