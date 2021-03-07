@@ -14,7 +14,23 @@
                    {% endfor %}
                {% endif %}>
     {% endif %}
-    {% if button.type == 'button' %}
+    {% if button.type == 'button-primary' %}
+        <a href="{{ button.href }}"
+           id="{{ button.id }}"
+           name="{{ button.name }}"
+           target="{{ button.target }}"
+           class="btn btn-primary {{ button.class }}"
+           {% if properties.events %}
+               {% for key, value in properties.events %}
+                    {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
+                                  'onmouseover', 'onmouseup', 'onkeypress', 'onclick', 'ondblclick',
+                                  'onkeydown', 'onblur'] %}
+                        {{ key }} = "{{ value }}"
+                    {% endif %}
+               {% endfor %}
+           {% endif %}>{{ __(button.title) }}</a>
+    {% endif %}
+    {% if button.type == 'button-secondary' %}
         <a href="{{ button.href }}"
            id="{{ button.id }}"
            name="{{ button.name }}"
