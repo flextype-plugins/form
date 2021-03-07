@@ -1,6 +1,7 @@
 .header {
     @extend .row;
-    @extend .mb-3;
+    @extend .pb-4;
+    @extend .pt-2;
     @extend .d-flex;
     @extend .align-items-center;
 
