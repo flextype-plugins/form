@@ -2,7 +2,7 @@
  * Flextype UI
  */
 
-@import "base/variables.scss";
+@import "variables.scss";
 
 // Configuration
 @import "node_modules/bootstrap/scss/functions";
@@ -41,11 +41,11 @@
 @import "node_modules/bootstrap/scss/carousel";
 @import "node_modules/bootstrap/scss/spinners";
 
-@import "navbar/navbar.scss";
-@import "header/header.scss";
-@import "select/select.scss";
-@import "trumbowyg/trumbowyg.scss";
-@import "flatpickr/flatpickr.scss";
+@import "navbar.scss";
+@import "header.scss";
+@import "fieldsets/fields/select/field.scss";
+@import "fieldsets/fields/html/field.scss";
+@import "fieldsets/fields/datetimepicker/field.scss";
 
 // Helpers
 @import "node_modules/bootstrap/scss/helpers";
