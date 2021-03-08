@@ -19,9 +19,6 @@ sass.compiler      = require('node-sass');
             // Swal2
             'node_modules/sweetalert2/dist/sweetalert2.min.css',
 
-            // AnimateCSS
-            'node_modules/animate.css/animate.min.css',
-
             // Select2
             'node_modules/select2/dist/css/select2.min.css',
 
@@ -76,7 +73,7 @@ sass.compiler      = require('node-sass');
             'node_modules/trumbowyg/dist/plugins/noembed/trumbowyg.noembed.min.js',
             'node_modules/trumbowyg/dist/plugins/table/trumbowyg.table.min.js',
 
-            // ParsleyJS Form Validatator
+            // Bootstrap
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
 
             // Flextype UI JS
@@ -89,9 +86,7 @@ sass.compiler      = require('node-sass');
             'fieldsets/fields/visibility/field.js',
             'fieldsets/fields/html/field.js',
         ])
-        .pipe(sourcemaps.init())
         .pipe(concat('flextype-ui.min.js'))
-        .pipe(sourcemaps.write())
         .pipe(size({ showFiles: true }))
         .pipe(gulp.dest('assets/dist/js/'))
         .pipe(gzip())
