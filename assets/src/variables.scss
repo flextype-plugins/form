@@ -3,14 +3,23 @@ body {
     font-size: 14px;
 }
 
+// Colors
 $primary: #16171a;
 
+$body-color: #16171a;
+
+// Radius
 $border-radius:    .375rem !default;
 $border-radius-sm: .45rem !default;
 $border-radius-lg: .6rem !default;
 
-$body-color: #16171a;
+// Dropdowns
 $dropdown-bg: $primary;
 $dropdown-link-hover-bg: $primary;
 
+// Form Controls
+$input-focus-border-color: $primary;
 $input-btn-focus-box-shadow: none;
+
+// Tables
+$table-variants: ();
