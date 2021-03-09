@@ -1,21 +1,33 @@
 .workspace-navigation {
-    background-color: white;
+    background-color: $primary;
     border-bottom: 1px solid $border-color;
 
     a {
-        color: $body-color;
+        color: $white;
+
+        &:hover {
+            color: $white;
+            opacity: .9;
+        }
+    }
+
+    .navbar-nav {
+        margin-left: 10px;
     }
 
     .nav-item > .nav-link {
         position: relative;
-        color: $body-color;
+        color: $white;
+        padding-right: .6rem;
+        padding-left: .6rem;
     }
 
     .nav-item:not(:first-of-type) > .nav-link::before {
         content: "/";
         position: absolute;
         left: -3px;
-        color: $border-color;
+        color: $white;
+        opacity: .5;
     }
 
     .dropdown-toggle {
@@ -25,7 +37,7 @@
         &:after {
             position: absolute;
             top: 13px;
-            right: 0;
+            right: -5px;
         }
     }
 }
