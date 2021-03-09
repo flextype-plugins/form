@@ -1,6 +1,6 @@
 .workspace-navigation {
     background-color: $primary;
-    border-bottom: 1px solid $border-color;
+    border: 0;
 
     a {
         color: $white;
@@ -12,7 +12,7 @@
     }
 
     .navbar-nav {
-        margin-left: 10px;
+        margin-left: 8px;
     }
 
     .nav-item > .nav-link {
@@ -39,5 +39,12 @@
             top: 13px;
             right: -5px;
         }
+    }
+
+    .dropdown-menu {
+        border: 0;
+        top: 37px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 }
