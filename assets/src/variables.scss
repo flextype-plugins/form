@@ -1108,21 +1108,21 @@ $popover-arrow-outer-color:         fade-in($popover-border-color, .05);
 
 // Toasts
 
-$toast-max-width:                   350px;
+$toast-max-width:                   auto;
 $toast-padding-x:                   .75rem;
 $toast-padding-y:                   .5rem;
-$toast-font-size:                   .875rem;
-$toast-color:                       null;
-$toast-background-color:            rgba($white, .85);
+$toast-font-size:                   1rem;
+$toast-color:                       $white;
+$toast-background-color:            $primary;
 $toast-border-width:                1px;
-$toast-border-color:                rgba(0, 0, 0, .1);
+$toast-border-color:                $primary;
 $toast-border-radius:               $border-radius;
 $toast-box-shadow:                  $box-shadow;
 $toast-spacing:                     $container-padding-x;
 
 $toast-header-color:                $gray-600;
-$toast-header-background-color:     rgba($white, .85);
-$toast-header-border-color:         rgba(0, 0, 0, .05);
+$toast-header-background-color:     $primary;
+$toast-header-border-color:         $white;
 
 
 // Badges
