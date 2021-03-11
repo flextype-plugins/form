@@ -33,7 +33,7 @@
 <div class="{{ grid.col(fieldset.size, fieldset.grid) }}">
 
     {% if fieldset.header %}
-        <div class="header" {% if fieldset.header.buttons %}style="display: block!important;"{% endif %}>
+        <div class="header" {% if not fieldset.header.buttons %}style="display: block!important;"{% endif %}>
             <div class="header-title"><h1 class="{{ fieldset.header.class }}">{{ __(fieldset.header.title) }}</h1></div>
             {% if fieldset.header.buttons %}<div class="header-buttons">{% include "plugins/form/fieldsets/buttons.html" with {"buttons": fieldset.header.buttons} %}</div>{% endif %}
         </div>
