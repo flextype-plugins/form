@@ -62,6 +62,9 @@ sass.compiler      = require('node-sass');
             // ParsleyJS Form Validatator
             'node_modules/parsleyjs/dist/parsley.min.js',
 
+            // Speakingurl
+            'node_modules/speakingurl/speakingurl.min.js',
+
             // Select2
             'node_modules/select2/dist/js/select2.min.js',
 
@@ -74,7 +77,7 @@ sass.compiler      = require('node-sass');
             'node_modules/trumbowyg/dist/plugins/table/trumbowyg.table.min.js',
 
             // Bootstrap
-            'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
 
             // Flextype UI JS
             'fieldsets/fields/datetimepicker/field.js',
