@@ -30,6 +30,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "jquery": "^3.6.0",
     "parsleyjs": "^2.9.2",
+    "speakingurl": "^14.0.1",
     "postcss-import": "^12.0.0",
     "select2": "^4.0.13",
     "sweetalert2": "^10.15.5",
