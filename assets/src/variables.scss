@@ -3,6 +3,17 @@ body {
     font-size: 14px;
 }
 
+.dropdown-dots {
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    &.dropdown-toggle::after {
+        display: none;
+    }
+}
+
 // Color system
 
 // scss-docs-start gray-color-variables
