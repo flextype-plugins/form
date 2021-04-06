@@ -1,5 +1,5 @@
 {% for key, button in buttons %}
-    {% if button.type == 'button-group' %}
+    {% if button.type == 'group' %}
         <div class="btn-group">
             <button href="{{ button.href }}"
                     type="button"
@@ -55,7 +55,7 @@
                    {% endfor %}
                {% endif %}>
     {% endif %}
-    {% if button.type == 'button-primary' %}
+    {% if button.type == 'primary' %}
         <a href="{{ button.href }}"
            id="{{ button.id }}"
            name="{{ button.name }}"
@@ -71,7 +71,7 @@
                {% endfor %}
            {% endif %}>{{ __(button.title) }}</a>
     {% endif %}
-    {% if button.type == 'button-secondary' %}
+    {% if button.type == 'secondary' %}
         <a href="{{ button.href }}"
            id="{{ button.id }}"
            name="{{ button.name }}"
