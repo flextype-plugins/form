@@ -6,6 +6,7 @@
            name="{{ field_id }}"
            value="{{ include(template_from_string(field_value)) }}"
            class="form-control {{ properties.class }}"
+           {% if properties.disabled %}disabled="disabled"{% endif %}
            {% if properties.events %}
                {% for key, value in properties.events %}
                     {% if key in ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
