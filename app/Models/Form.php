@@ -57,8 +57,8 @@ class Form
     {
         if (Arrays::has($values, $element)) {
             $field_value = Arrays::get($values, $element);
-        } elseif (Arrays::has($properties, 'default')) {
-            $field_value = $properties['default'];
+        } elseif (Arrays::has($properties, 'value')) {
+            $field_value = $properties['value'];
         } else {
             $field_value = '';
         }
