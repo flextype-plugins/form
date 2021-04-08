@@ -24,20 +24,21 @@ class Form
      *
      * @param array $fieldset Fieldset
      * @param array $values   Fieldset values
+     * @param array $vars     Fieldset variables
      *
      * @return string Returns form based on fieldset
      *
      * @access public
      */
-    public function render(array $fieldset, array $values = []) : string
+    public function render(array $fieldset, array $values = [], array $vars = []): string
     {
         return flextype('twig')->fetch(
             'plugins/form/fieldsets/base.html',
-            [
+            array_merge([
                 'fieldset' => $fieldset,
                 'values' => $values,
                 'query' => $_GET,
-            ]
+            ], $vars)
         );
     }
 
