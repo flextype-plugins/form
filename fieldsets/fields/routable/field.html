@@ -1,7 +1,7 @@
 {% import "plugins/form/fieldsets/macros/grid.html" as grid %}
 {% set options = {1: __('admin_yes'), 0: __('admin_no')} %}
 <div class="mb-3 {{ grid.col(properties.size, properties.grid) }}">
-    <label for="{{ field_id }}" class="form-label">{{ __(properties.title) }}</label>
+    <label for="{{ field_id }}" class="form-label">{{ include(template_from_string(properties.title)) }}</label>
     <select class="form-control {{ properties.class }} js-select-routable"
             name="{{ field_name }}"
             {% if properties.events %}
@@ -18,6 +18,6 @@
         {% endfor %}
     </select>
     {% if properties.help %}
-        <small>{{ __(properties.help) }}</small>
+        <small>{{ include(template_from_string(properties.help)) }}</small>
     {% endif %}
 </div>

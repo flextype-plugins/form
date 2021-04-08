@@ -1,4 +1,4 @@
-<form action="{% if fieldset.form.action %}{{ urlFor(fieldset.form.action) }}{% endif %}"
+<form action="{% if fieldset.form.action %}{{ include(template_from_string(fieldset.form.action)) }}{% endif %}"
       method="{% if fieldset.form.method %}{{ fieldset.form.method }}{% else %}post{% endif %}"
       {% if fieldset.form.id %}id="{{ fieldset.form.id }}"{% endif %}
       {% if fieldset.form.name %}name="{{ fieldset.form.name }}"{% endif %}

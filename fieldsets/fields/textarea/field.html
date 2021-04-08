@@ -25,8 +25,8 @@
               {% if properties.validation.minlength %}data-parsley-minlength="{{ properties.validation.minlength }}"{% endif %}
               {% if properties.validation.type %}data-parsley-type="{{ properties.validation.type }}"{% endif %}
               {% if properties.validation.required %}data-parsley-required="true"{% endif %}
-              {% if properties.validation.pattern %}data-parsley-pattern="{{ properties.validation.pattern }}"{% endif %}>{{ field_value }}</textarea>
+              {% if properties.validation.pattern %}data-parsley-pattern="{{ properties.validation.pattern }}"{% endif %}>{{ include(template_from_string(field_value)) }}</textarea>
     {% if properties.help %}
-        <small>{{ __(properties.help) }}</small>
+        <small>{{ include(template_from_string(properties.help)) }}</small>
     {% endif %}
 </div>

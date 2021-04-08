@@ -1,7 +1,7 @@
 {% import "plugins/form/fieldsets/macros/grid.html" as grid %}
 {% set templates = filesystem().find().depth(0).in(PATH_PROJECT ~ '/themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/').files() %}
 <div class="mb-3 {{ grid.col(properties.size, properties.grid) }}">
-    <label for="{{ field_id }}" class="form-label">{{ __(properties.title) }}</label>
+    <label for="{{ field_id }}" class="form-label">{{ include(template_from_string(properties.title)) }}</label>
     <select class="form-control {{ properties.class }} js-select-template"
             name="{{ field_name }}"
             {% if properties.events %}
@@ -20,6 +20,6 @@
         {% endfor %}
     </select>
     {% if properties.help %}
-        <small>{{ __(properties.help) }}</small>
+        <small>{{ include(template_from_string(properties.help)) }}</small>
     {% endif %}
 </div>

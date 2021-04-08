@@ -1,10 +1,10 @@
 {% import "plugins/form/fieldsets/macros/grid.html" as grid %}
 <div class="mb-3 {{ grid.col(properties.size, properties.grid) }}">
-    <label for="{{ field_id }}" class="form-label">{{ __(properties.title) }}</label>
+    <label for="{{ field_id }}" class="form-label">{{ include(template_from_string(properties.title)) }}</label>
     <input type="number"
            id="{{ field_id }}"
            name="{{ field_id }}"
-           value="{{ field_value }}"
+           value="{{ include(template_from_string(field_value)) }}"
            class="plugin-form-control {{ properties.class }}"
            {% if properties.events %}
                {% for key, value in properties.events %}
@@ -27,6 +27,6 @@
            {% if properties.validation.required %}data-parsley-required="true"{% endif %}
            {% if properties.validation.pattern %}data-parsley-pattern="{{ properties.validation.pattern }}"{% endif %}>
     {% if properties.help %}
-        <small>{{ __(properties.help) }}</small>
+        <small>{{ include(template_from_string(properties.help)) }}</small>
     {% endif %}
 </div>
