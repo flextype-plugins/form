@@ -1,1 +1,3 @@
-{{ include(template_from_string(properties.html)) }}
+<div class="mb-3 {{ grid.col(properties.size, properties.grid) }}">
+    {{ include(template_from_string(properties.html)) }}
+</div>
