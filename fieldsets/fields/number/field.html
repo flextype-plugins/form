@@ -6,6 +6,7 @@
            name="{{ field_id }}"
            value="{{ include(template_from_string(field_value)) }}"
            class="plugin-form-control {{ properties.class }}"
+           style="{{ properties.style }}"
            {% if properties.disabled %}disabled="disabled"{% endif %}
            {% if properties.events %}
                {% for key, value in properties.events %}
