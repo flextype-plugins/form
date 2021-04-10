@@ -42,9 +42,10 @@
 @import "validation.scss";
 @import "navbar.scss";
 @import "header.scss";
-@import "fieldsets/fields/select/field.scss";
-@import "fieldsets/fields/html/field.scss";
-@import "fieldsets/fields/datetimepicker/field.scss";
+@import "fieldsets/fields/InputSelect/field.scss";
+@import "fieldsets/fields/InputEditor/field.scss";
+@import "fieldsets/fields/InputDateTimePicker/field.scss";
+@import "fieldsets/fields/Divider/field.scss";
 
 // Helpers
 @import "node_modules/bootstrap/scss/helpers";
