@@ -363,6 +363,103 @@ class Blueprints
     }
 
     /**
+     * Render blueprint.
+     *
+     * @param array $blueprint Blueprint data.
+     * @param array $values    Blueprint values.
+     * @param array $vars      Blueprint variables.
+     *
+     * @return string Returns rendered blueprint based on blueprint.
+     *
+     * @access public
+     */
+    public function render(array $blueprint, array $values = [], array $vars = []): string
+    {
+        return flextype('twig')->fetch(
+            'plugins/blueprint/blueprints/base.html',
+            array_merge([
+                'blueprint' => $blueprint,
+                'values'    => $values,
+                'query'     => $_GET,
+            ], $vars)
+        );
+    }
+
+    /**
+     * Get blueprint element value.
+     *
+     * @param string $element    Blueprint element.
+     * @param array  $values     Blueprint values.
+     * @param array  $properties Blueprint properties.
+     *
+     * @return mixed Returns blueprint element value.
+     *
+     * @access public
+     */
+    public function getElementValue(string $element, array $values, array $properties)
+    {
+        if (Arrays::has($values, $element)) {
+            $fieldValue = Arrays::get($values, $element);
+        } elseif (Arrays::has($properties, 'value')) {
+            $fieldValue = $properties['value'];
+        } else {
+            $fieldValue = '';
+        }
+
+        return $fieldValue;
+    }
+
+    /**
+     * Get blueprint element name.
+     *
+     * @param string $element Element.
+     *
+     * @return string Returns blueprint element name.
+     *
+     * @access public
+     */
+    public function getElementName(string $element) : string
+    {
+        $pos = strpos($element, '.');
+
+        if ($pos === false) {
+            $fieldName = $element;
+        } else {
+            $fieldName = str_replace('.', '][', "$element") . ']';
+        }
+
+        $pos = strpos($fieldName, ']');
+
+        if ($pos !== false) {
+            $fieldName = substr_replace($fieldName, '', $pos, strlen(']'));
+        }
+
+        return $fieldName;
+    }
+
+    /**
+     * Get blueprint element ID.
+     *
+     * @param string $element Element.
+     *
+     * @return string Returns blueprint element ID.
+     *
+     * @access public
+     */
+    public function getElementID(string $element) : string
+    {
+        $pos = strpos($element, '.');
+
+        if ($pos === false) {
+            $fieldName = $element;
+        } else {
+            $fieldName = str_replace('.', '_', "$element");
+        }
+
+        return $fieldName;
+    }
+
+    /**
      * Get blueprint file location
      *
      * @param string $id Unique identifier of the blueprint(blueprints).
