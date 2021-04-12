@@ -11,6 +11,8 @@ use Flextype\Plugin\Acl\Middlewares\AclIsUserLoggedInRolesInMiddleware;
 flextype()->group('/' . $admin_route, function () : void {
 
     flextype()->get('/ui', function(Request $request, Response $response) {
+        flextype('registry')->set('workspace', ['icon' => ['name' => 'newspaper', 'set' => 'bootstrap']]);
+
         return flextype('twig')->render(
             $response,
             'plugins/form/fieldsets/ui.html',
